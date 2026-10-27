@@ -11,6 +11,7 @@
   --color-amber: #FFA800;
   --color-amber-soft: #FFC14D;
   --color-amber-glow: rgba(255, 168, 0, 0.28);
+  --color-amber-contrast: #B45309; /* WCAG AA accessible on light backgrounds */
   
   --color-bg: #F8F8F5;
   --color-surface: #FFFFFF;
@@ -42,6 +43,7 @@ html.dark {
   --color-forest-dark: #0A2419;
   --color-forest-light: #21684B;
   --color-forest-surface: rgba(33, 104, 75, 0.25);
+  --color-amber-contrast: #FFA800;
   
   --color-bg: #0C1511;
   --color-surface: #12211A;
@@ -197,4 +199,25 @@ a:focus-visible, button:focus-visible {
 html.dark .glass-panel {
   background: rgba(13, 34, 24, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.text-amber-contrast {
+  color: var(--color-amber-contrast);
+}
+
+/* Lightbox styles */
+.lightbox-modal {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Screenshot Fallback Card */
+.screenshot-placeholder {
+  background: linear-gradient(135deg, rgba(18, 67, 46, 0.06), rgba(255, 168, 0, 0.08));
+  border: 1.5px dashed rgba(18, 67, 46, 0.25);
+}
+
+html.dark .screenshot-placeholder {
+  background: linear-gradient(135deg, rgba(18, 67, 46, 0.25), rgba(255, 168, 0, 0.12));
+  border: 1.5px dashed rgba(255, 168, 0, 0.35);
 }

@@ -1,0 +1,13 @@
+{
+  "name": "vicky-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Vicky Juni Hendri - The Friendly Analyst",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.output.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

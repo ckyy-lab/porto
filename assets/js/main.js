@@ -127,21 +127,31 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(kpiSection);
   }
 
-  // 4. Modal System (MBG Case Study, ERP Case Study, CV Preview)
+  // 4. Modal System (MBG Case Study, ERP Case Study, CV Preview, Lightbox)
   const modals = document.querySelectorAll('.modal-dialog');
   const modalTriggers = document.querySelectorAll('[data-open-modal]');
   const modalCloseBtns = document.querySelectorAll('[data-close-modal]');
+  let lastFocusedElement = null;
 
-  function openModal(modalId) {
+  function getFocusableElements(container) {
+    return container.querySelectorAll(
+      'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+  }
+
+  function openModal(modalId, triggerEl = null) {
     const modal = document.getElementById(modalId);
     if (!modal) return;
+    lastFocusedElement = triggerEl || document.activeElement;
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
 
-    // Focus close button for accessibility
-    const closeBtn = modal.querySelector('[data-close-modal]');
-    if (closeBtn) closeBtn.focus();
+    // Focus close button or first focusable element for accessibility
+    const focusable = getFocusableElements(modal);
+    if (focusable.length > 0) {
+      focusable[0].focus();
+    }
   }
 
   function closeModal(modal) {
@@ -149,13 +159,18 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
     document.body.style.overflow = '';
+
+    // Return focus to triggering element
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
   }
 
   modalTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       const modalId = trigger.getAttribute('data-open-modal');
-      openModal(modalId);
+      openModal(modalId, trigger);
     });
   });
 
@@ -174,6 +189,44 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal(modal);
       }
     });
+
+    // Trap focus inside open modal
+    modal.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      const focusable = getFocusableElements(modal);
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  });
+
+  // Lightbox Image Preview
+  const lightboxModal = document.getElementById('modal-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-lightbox-src]');
+    if (trigger && lightboxModal && lightboxImg) {
+      e.preventDefault();
+      const src = trigger.getAttribute('data-lightbox-src');
+      const caption = trigger.getAttribute('data-lightbox-caption') || '';
+      lightboxImg.src = src;
+      if (lightboxCaption) lightboxCaption.textContent = caption;
+      openModal('modal-lightbox', trigger);
+    }
   });
 
   // Close modals on Escape key
@@ -208,5 +261,14 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+  }
+
+  // Open modal from URL query parameter (e.g. ?modal=modal-mbg)
+  const urlParams = new URLSearchParams(window.location.search);
+  const targetModal = urlParams.get('modal');
+  if (targetModal) {
+    setTimeout(() => {
+      openModal(targetModal);
+    }, 200);
   }
 });

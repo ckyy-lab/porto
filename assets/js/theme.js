@@ -11,6 +11,12 @@
 
   // Detect initial theme
   function getPreferredTheme() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryTheme = urlParams.get('theme');
+    if (queryTheme === 'dark' || queryTheme === 'light') {
+      return queryTheme;
+    }
+
     const storedTheme = localStorage.getItem(STORAGE_KEY);
     if (storedTheme === 'dark' || storedTheme === 'light') {
       return storedTheme;

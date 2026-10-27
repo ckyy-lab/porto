@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="page_title">Vicky Juni Hendri – Data &amp; BI Portfolio</title>
   <meta name="description" content="Portfolio of Vicky Juni Hendri – Information Systems student specializing in Data Analysis, Business Intelligence, and ERP Process Modeling." data-i18n="meta_description">
+  <link rel="canonical" href="https://ckyy-lab.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ckyy-lab.github.io/">
+  <meta property="og:title" content="Vicky Juni Hendri – Data &amp; BI Portfolio">
+  <meta property="og:description" content="Information Systems undergraduate specializing in Data Analysis, Business Intelligence, and ERP Process Modeling.">
+  <meta property="og:image" content="assets/images/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ckyy-lab.github.io/">
+  <meta name="twitter:title" content="Vicky Juni Hendri – Data &amp; BI Portfolio">
+  <meta name="twitter:description" content="Information Systems undergraduate specializing in Data Analysis, Business Intelligence, and ERP Process Modeling.">
+  <meta name="twitter:image" content="assets/images/og-image.png">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,6 +41,7 @@
             amber: {
               brand: '#FFA800',
               soft: '#FFC14D',
+              contrast: '#B45309',
             },
             softwhite: '#F8F8F5',
             ink: '#111111',
@@ -63,7 +79,7 @@
       </a>
 
       <!-- Center Links (Desktop) -->
-      <ul class="hidden lg:flex items-center gap-6 xl:gap-7 text-[15px] font-medium tracking-wide">
+      <ul class="hidden lg:flex items-center gap-5 xl:gap-7 text-[15px] font-medium tracking-wide">
         <li>
           <a class="desktop-nav-link text-amber-brand font-bold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-amber-brand after:rounded-full transition-colors" href="#hero" data-i18n="nav_home">Home</a>
         </li>
@@ -72,6 +88,14 @@
         <li><a class="desktop-nav-link text-white/80 hover:text-white transition-colors py-1 relative" href="#achievement" data-i18n="nav_achievement">Achievement</a></li>
         <li><a class="desktop-nav-link text-white/80 hover:text-white transition-colors py-1 relative" href="#experience" data-i18n="nav_experience">Experience</a></li>
         <li><a class="desktop-nav-link text-white/80 hover:text-white transition-colors py-1 relative" href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li>
+          <button type="button" data-open-modal="modal-cv" class="desktop-nav-link text-white/80 hover:text-amber-brand transition-colors py-1 relative flex items-center gap-1 font-semibold cursor-pointer">
+            <span data-i18n="nav_cv">CV</span>
+            <svg class="w-3.5 h-3.5 opacity-80" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4m-8 8h16"></path>
+            </svg>
+          </button>
+        </li>
       </ul>
 
       <!-- Right Controls: Language Switcher + Theme Toggle + CTA -->
@@ -132,6 +156,10 @@
         <a class="mobile-nav-link text-white/90 hover:text-amber-brand py-1" href="#achievement" data-i18n="nav_achievement">Achievement</a>
         <a class="mobile-nav-link text-white/90 hover:text-amber-brand py-1" href="#experience" data-i18n="nav_experience">Experience</a>
         <a class="mobile-nav-link text-white/90 hover:text-amber-brand py-1" href="#skills" data-i18n="nav_skills">Skills</a>
+        <button type="button" data-open-modal="modal-cv" class="mobile-nav-link text-white/90 hover:text-amber-brand py-1 flex items-center justify-between w-full text-left font-semibold cursor-pointer">
+          <span data-i18n="nav_cv">CV</span>
+          <span class="text-xs bg-amber-brand/20 text-amber-brand px-2.5 py-0.5 rounded-full font-bold">Preview ↗</span>
+        </button>
       </nav>
 
       <div class="pt-4 border-t border-white/15 flex flex-col gap-3">
@@ -182,9 +210,9 @@
             </span>
           </div>
 
-          <!-- Headline -->
-          <h1 class="text-ink dark:text-white text-4xl sm:text-5xl lg:text-[62px] font-black leading-[1.08] tracking-tight" data-i18n-html="hero_headline">
-            I'm <span class="italic text-amber-brand underline decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Information Systems Student Focused on Data &amp; BI.
+          <!-- Headline (with accessible contrast on light background) -->
+          <h1 class="text-ink dark:text-white text-4xl sm:text-5xl lg:text-[62px] font-black leading-[1.08] tracking-tight">
+            I'm <span class="italic text-amber-contrast dark:text-amber-brand underline decoration-amber-contrast dark:decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Information Systems Student Focused on Data &amp; BI.
           </h1>
 
           <!-- Bio Paragraph -->
@@ -192,7 +220,7 @@
             Information Systems undergraduate with hands-on experience in data analysis, Business Intelligence, and process analysis. I turn operational data into KPI dashboards and insights using Python, SQL, and BI tools.
           </p>
 
-          <!-- Location & Status Badge -->
+          <!-- Location & Status Badge (Updated as required) -->
           <div class="flex flex-wrap items-center gap-3 pt-1">
             <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-forest/10 dark:bg-forest/30 text-forest dark:text-[#64D8A4]">
               <svg class="w-3.5 h-3.5 text-forest dark:text-[#64D8A4]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -201,9 +229,9 @@
               </svg>
               <span data-i18n="hero_location">Depok, Indonesia</span>
             </span>
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300/40 dark:border-emerald-700/40">
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-300 border border-emerald-300/40 dark:border-emerald-700/40">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse-dot"></span>
-              <span data-i18n="hero_status">Open for Data &amp; BI Roles</span>
+              <span data-i18n="hero_status">Seeking Data/BI Internship • Available from [ISI BULAN/TAHUN] • [ISI DURASI] • [ISI LOKASI/REMOTE]</span>
             </span>
           </div>
 
@@ -219,9 +247,12 @@
               <span data-i18n="hero_cta_projects">View My Projects</span>
             </a>
 
-            <!-- Outlined CTA Button (Opens CV Modal) -->
-            <button type="button" data-open-modal="modal-cv" class="border-2 border-forest dark:border-amber-brand hover:bg-forest hover:text-white dark:hover:bg-amber-brand dark:hover:text-ink text-forest dark:text-amber-brand font-bold text-[15px] px-7 py-3 rounded-full transition-all duration-200" data-i18n="hero_cta_cv">
-              Download CV
+            <!-- Outlined CTA Button (Download CV - Opens CV Preview Modal) -->
+            <button type="button" data-open-modal="modal-cv" class="border-2 border-forest dark:border-amber-brand hover:bg-forest hover:text-white dark:hover:bg-amber-brand dark:hover:text-ink text-forest dark:text-amber-brand font-bold text-[15px] px-6 py-3 rounded-full transition-all duration-200 flex items-center gap-2 shadow-xs cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4m-8 8h16"></path>
+              </svg>
+              <span data-i18n="hero_cta_cv">Download CV</span>
             </button>
           </div>
         </div>
@@ -330,7 +361,7 @@
       <div class="absolute -right-4 -bottom-6 w-16 h-16 bg-forest dark:bg-[#0A2218] rotate-45 pointer-events-none hidden md:block"></div>
     </div>
 
-    <!-- SECTION 1: ABOUT & KPI BADGE CARDS -->
+    <!-- SECTION 1: ABOUT & KPI BADGE CARDS (01) -->
     <section class="py-24 max-w-[1240px] mx-auto px-6" id="about">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         <!-- Bio Summary Left -->
@@ -339,7 +370,7 @@
             <span data-i18n="about_tag">01 • About Vicky</span>
           </div>
           <h2 class="text-3xl md:text-4xl font-extrabold text-ink dark:text-white leading-tight" data-i18n-html="about_heading">
-            Translating complex operational workflows into <span class="text-amber-brand italic">actionable</span> intelligence.
+            Translating complex operational workflows into <span class="text-amber-contrast dark:text-amber-brand italic">actionable</span> intelligence.
           </h2>
           <p class="text-slate dark:text-[#9BA9A2] text-base leading-relaxed" data-i18n="about_bio">
             As an Information Systems undergraduate at Universitas Pembangunan Nasional "Veteran" Jakarta, I combine data analytical rigor with end-to-end business process modeling. My core focus lies in extracting raw records from databases, conducting meticulous ETL pipelines, and synthesizing them into intuitive executive dashboards.
@@ -394,7 +425,7 @@
             <p class="text-xs text-white/70 border-t border-white/10 pt-3" data-i18n="kpi2_desc">Processed, cleaned, and modeled into KPI analytics pipelines with Python &amp; SQL.</p>
           </div>
 
-          <!-- KPI 3: Major Projects -->
+          <!-- KPI 3: Academic Projects (Updated Claim) -->
           <div class="bg-forest dark:bg-[#0F2A1E] rounded-[24px] p-7 text-white shadow-[0_8px_24px_rgba(18,67,46,0.12)] border border-[#1b563d] dark:border-[#1E4E37] flex flex-col justify-between hover:-translate-y-1 transition-transform">
             <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-white/70">
               <span data-i18n="kpi3_title">System Delivery</span>
@@ -404,7 +435,7 @@
               <div class="text-5xl font-black text-amber-brand tracking-tight">
                 <span class="kpi-counter" data-target="2">2</span>
               </div>
-              <div class="text-white/80 font-bold text-sm mt-1" data-i18n="kpi3_label">Major Enterprise Projects</div>
+              <div class="text-white/80 font-bold text-sm mt-1" data-i18n="kpi3_label">Academic Projects</div>
             </div>
             <p class="text-xs text-white/70 border-t border-white/10 pt-3" data-i18n="kpi3_desc">Full lifecycle BI deployment and end-to-end Odoo 17 ERP manufacturing implementation.</p>
           </div>
@@ -425,7 +456,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2: FEATURED PROJECTS -->
+    <!-- SECTION 2: FEATURED PROJECTS (02) -->
     <section class="py-20 bg-white dark:bg-[#101C16] border-y border-gray-200/80 dark:border-[#1F3D30] transition-colors" id="projects">
       <div class="max-w-[1240px] mx-auto px-6">
         <!-- Section Header -->
@@ -438,49 +469,59 @@
               High-Impact <span class="italic text-amber-brand">Data &amp; Systems</span> Projects
             </h2>
           </div>
-          <p class="text-slate dark:text-[#9BA9A2] max-w-md text-sm md:text-base" data-i18n="projects_sub">
-            Proven implementations combining statistical computing, interactive BI frontends, and enterprise ERP orchestration.
-          </p>
+          
         </div>
 
         <!-- 2 Large Cards Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Project 1: MBG Dashboard -->
+          <!-- Project 1: MBG Dashboard (With Real Screenshots / Graceful Fallback) -->
           <div class="bg-[#F8F8F5] dark:bg-[#15251E] rounded-[24px] border border-gray-200 dark:border-[#1F3D30] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
-            <!-- Mockup Visual Header -->
-            <div class="h-64 bg-gradient-to-br from-amber-soft/20 via-amber-brand/10 to-forest/10 dark:from-amber-brand/15 dark:to-forest/30 p-6 flex flex-col justify-between relative overflow-hidden border-b border-gray-200 dark:border-[#1F3D30]">
-              <div class="flex items-center justify-between relative z-10">
-                <span class="bg-forest dark:bg-[#0A2419] text-white text-xs font-bold px-3 py-1.5 rounded-full" data-i18n="proj1_badge">BI Dashboard</span>
+            <!-- Mockup / Real Screenshot Header -->
+            <div class="h-64 bg-gradient-to-br from-amber-soft/20 via-amber-brand/10 to-forest/10 dark:from-amber-brand/15 dark:to-forest/30 p-5 flex flex-col justify-between relative overflow-hidden border-b border-gray-200 dark:border-[#1F3D30]">
+              <div class="flex items-center justify-between relative z-10 gap-2 flex-wrap">
+                <div class="flex items-center gap-2">
+                  <span class="bg-forest dark:bg-[#0A2419] text-white text-xs font-bold px-3 py-1.5 rounded-full" data-i18n="proj1_badge">BI Dashboard</span>
+                  <span class="bg-amber-brand text-ink text-[11px] font-black px-2.5 py-1 rounded-full shadow-xs" data-i18n="proj1_badge_group">Group Project • 4 Members</span>
+                </div>
                 <span class="bg-white/90 dark:bg-black/50 text-slate dark:text-white/80 font-bold text-xs px-3 py-1.5 rounded-full shadow-xs" data-i18n="proj1_date">Mar – Apr 2026</span>
               </div>
 
-              <!-- Dashboard Mockup Graphics (SVG Data Representation) -->
-              <div class="relative z-10 bg-white dark:bg-[#112019] rounded-2xl p-4 shadow-lg border border-gray-200/80 dark:border-[#1F3D30] max-w-sm mx-auto w-full group-hover:scale-[1.02] transition-transform">
-                <div class="flex items-center justify-between pb-3 border-b border-gray-100 dark:border-white/10">
-                  <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
-                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
-                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
-                    <span class="text-[11px] font-bold text-ink dark:text-white pl-1" data-i18n="proj1_kpi_title">MBG Operations KPI</span>
+              <!-- Real Screenshots Container with Graceful Fallback -->
+              <div class="relative z-10 max-w-md mx-auto w-full">
+                <!-- Dual Screenshot Preview -->
+                <div class="grid grid-cols-2 gap-2 group-hover:scale-[1.02] transition-transform">
+                  <!-- Screenshot 1 -->
+                  <div class="relative bg-white dark:bg-[#112019] rounded-xl overflow-hidden border border-gray-200 dark:border-[#1F3D30] shadow-md h-28 flex items-center justify-center">
+                    <img 
+                      src="assets/images/mbg-anomaly.png" 
+                      alt="MBG Anomaly Ratio by Province Screenshot" 
+                      loading="lazy" 
+                      class="w-full h-full object-cover object-top"
+                      onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <!-- Fallback if file not yet uploaded -->
+                    <div class="hidden flex flex-col items-center justify-center text-center p-2 w-full h-full bg-[#F3F4F0] dark:bg-[#172B22]">
+                      <svg class="w-5 h-5 text-amber-brand mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                      <span class="text-[10px] font-bold text-forest dark:text-white">Anomaly Ratio</span>
+                      <span class="text-[9px] text-slate dark:text-white/60">mbg-anomaly.png</span>
+                    </div>
                   </div>
-                  <span class="text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold px-2 py-0.5 rounded" data-i18n="proj1_tag_live">Live Streamlit</span>
-                </div>
-                <div class="grid grid-cols-3 gap-2 pt-3">
-                  <div class="bg-[#F8F8F5] dark:bg-[#172B22] p-2 rounded-lg text-center">
-                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj1_stat1_label">Records</span>
-                    <span class="text-sm font-extrabold text-forest dark:text-[#64D8A4]">5,420</span>
-                  </div>
-                  <div class="bg-[#F8F8F5] dark:bg-[#172B22] p-2 rounded-lg text-center">
-                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj1_stat2_label">Efficiency</span>
-                    <span class="text-sm font-extrabold text-amber-brand">94.8%</span>
-                  </div>
-                  <div class="bg-[#F8F8F5] dark:bg-[#172B22] p-2 rounded-lg text-center">
-                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj1_stat3_label">Districts</span>
-                    <span class="text-sm font-extrabold text-forest dark:text-[#64D8A4]">38 Kab</span>
+                  <!-- Screenshot 2 -->
+                  <div class="relative bg-white dark:bg-[#112019] rounded-xl overflow-hidden border border-gray-200 dark:border-[#1F3D30] shadow-md h-28 flex items-center justify-center">
+                    <img 
+                      src="assets/images/mbg-density.png" 
+                      alt="MBG Catering Distribution Density Screenshot" 
+                      loading="lazy" 
+                      class="w-full h-full object-cover object-top"
+                      onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <!-- Fallback if file not yet uploaded -->
+                    <div class="hidden flex flex-col items-center justify-center text-center p-2 w-full h-full bg-[#F3F4F0] dark:bg-[#172B22]">
+                      <svg class="w-5 h-5 text-forest dark:text-[#64D8A4] mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                      <span class="text-[10px] font-bold text-forest dark:text-white">Density vs Cost</span>
+                      <span class="text-[9px] text-slate dark:text-white/60">mbg-density.png</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Subtle background circle -->
               <div class="absolute -right-12 -bottom-12 w-44 h-44 rounded-full bg-amber-brand/20 blur-xl pointer-events-none"></div>
             </div>
 
@@ -491,8 +532,24 @@
                   Business Intelligence Dashboard – Nutritious Meal Program (MBG)
                 </h3>
                 <p class="text-slate dark:text-[#9BA9A2] text-sm leading-relaxed" data-i18n="proj1_desc">
-                  Interactive BI dashboard turning 5,000+ operational records into KPI insights; engineered data cleaning and ETL pipelines, and built geographic allocation heatmaps with high-frequency drill-down filters.
+                  Interactive BI dashboard turning 5,000+ operational records across 38 provinces into KPI insights; engineered data cleaning and ETL pipelines, and built geographic allocation heatmaps with high-frequency drill-down filters.
                 </p>
+
+                <!-- Metric Summary Strip (Consistent & Verified) -->
+                <div class="grid grid-cols-3 gap-2 pt-2">
+                  <div class="bg-white dark:bg-[#112019] p-2.5 rounded-xl text-center border border-gray-200/70 dark:border-[#1F3D30]">
+                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj1_stat1_label">Records</span>
+                    <span class="text-sm font-extrabold text-forest dark:text-[#64D8A4]">5,420</span>
+                  </div>
+                  <div class="bg-white dark:bg-[#112019] p-2.5 rounded-xl text-center border border-gray-200/70 dark:border-[#1F3D30]">
+                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj1_stat2_label">[ISI: Label Metrik 94.8%]</span>
+                    <span class="text-sm font-extrabold text-amber-brand">94.8%</span>
+                  </div>
+                  <div class="bg-white dark:bg-[#112019] p-2.5 rounded-xl text-center border border-gray-200/70 dark:border-[#1F3D30]">
+                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj1_stat3_label">Provinces</span>
+                    <span class="text-sm font-extrabold text-forest dark:text-[#64D8A4]">38</span>
+                  </div>
+                </div>
               </div>
 
               <!-- Tool Tags & CTA -->
@@ -522,22 +579,40 @@
                 <span class="bg-white/90 dark:bg-black/50 text-slate dark:text-white/80 font-bold text-xs px-3 py-1.5 rounded-full shadow-xs" data-i18n="proj2_date">May – Jul 2026</span>
               </div>
 
-              <!-- Workflow Mockup Graphics (BPMN / Odoo Representation) -->
-              <div class="relative z-10 bg-white dark:bg-[#112019] rounded-2xl p-4 shadow-lg border border-gray-200/80 dark:border-[#1F3D30] max-w-sm mx-auto w-full group-hover:scale-[1.02] transition-transform">
-                <div class="flex items-center justify-between pb-3 border-b border-gray-100 dark:border-white/10">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-forest dark:bg-emerald-400"></span>
-                    <span class="text-[11px] font-bold text-ink dark:text-white" data-i18n="proj2_flow_title">Odoo 17 Enterprise Flow</span>
+              <!-- Real Screenshots Container -->
+              <div class="relative z-10 max-w-md mx-auto w-full">
+                <!-- Dual Screenshot Preview -->
+                <div class="grid grid-cols-2 gap-2 group-hover:scale-[1.02] transition-transform">
+                  <!-- Screenshot 1: Odoo Dashboard -->
+                  <div class="relative bg-white dark:bg-[#112019] rounded-xl overflow-hidden border border-gray-200 dark:border-[#1F3D30] shadow-md h-28 flex items-center justify-center">
+                    <img 
+                      src="assets/images/erp-dashboard.png" 
+                      alt="Odoo 17 Enterprise Dashboard Screenshot" 
+                      loading="lazy" 
+                      class="w-full h-full object-cover object-top"
+                      onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <!-- Fallback -->
+                    <div class="hidden flex flex-col items-center justify-center text-center p-2 w-full h-full bg-[#F3F4F0] dark:bg-[#172B22]">
+                      <svg class="w-5 h-5 text-forest dark:text-[#64D8A4] mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                      <span class="text-[10px] font-bold text-forest dark:text-white">Odoo 17</span>
+                      <span class="text-[9px] text-slate dark:text-white/60">Dashboard</span>
+                    </div>
                   </div>
-                  <span class="text-[10px] bg-amber-100 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 font-bold px-2 py-0.5 rounded" data-i18n="proj2_flow_sub">P2P &amp; O2C</span>
-                </div>
-                <!-- BPMN Stage Pills -->
-                <div class="flex items-center justify-between pt-3 gap-1 text-[10px] font-bold text-center">
-                  <span class="bg-forest/10 dark:bg-forest/30 text-forest dark:text-[#64D8A4] px-2 py-1.5 rounded-md flex-1" data-i18n="proj2_stage1">Procurement</span>
-                  <span class="text-slate dark:text-white/60">→</span>
-                  <span class="bg-forest/10 dark:bg-forest/30 text-forest dark:text-[#64D8A4] px-2 py-1.5 rounded-md flex-1" data-i18n="proj2_stage2">Inventory</span>
-                  <span class="text-slate dark:text-white/60">→</span>
-                  <span class="bg-amber-brand/20 dark:bg-amber-brand/30 text-ink dark:text-amber-brand px-2 py-1.5 rounded-md flex-1" data-i18n="proj2_stage3">Sales O2C</span>
+                  <!-- Screenshot 2: BPMN Model -->
+                  <div class="relative bg-white dark:bg-[#112019] rounded-xl overflow-hidden border border-gray-200 dark:border-[#1F3D30] shadow-md h-28 flex items-center justify-center p-1">
+                    <img 
+                      src="assets/images/erp-produce-to-stock.png" 
+                      alt="BPMN 2.0 Process Diagram Screenshot" 
+                      loading="lazy" 
+                      class="w-full h-full object-contain"
+                      onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <!-- Fallback -->
+                    <div class="hidden flex flex-col items-center justify-center text-center p-2 w-full h-full bg-[#F3F4F0] dark:bg-[#172B22]">
+                      <svg class="w-5 h-5 text-amber-brand mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                      <span class="text-[10px] font-bold text-forest dark:text-white">BPMN 2.0</span>
+                      <span class="text-[9px] text-slate dark:text-white/60">Flow Diagram</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="absolute -left-12 -bottom-12 w-44 h-44 rounded-full bg-forest/20 blur-xl pointer-events-none"></div>
@@ -552,6 +627,22 @@
                 <p class="text-slate dark:text-[#9BA9A2] text-sm leading-relaxed" data-i18n="proj2_desc">
                   Simulated end-to-end supply chain and manufacturing in Odoo 17; redesigned P2P, O2C, and production workflows using rigorous BPMN models; unified procurement, inventory, manufacturing, and accounting modules.
                 </p>
+
+                <!-- Metric Summary Strip (Verified ERP Results) -->
+                <div class="grid grid-cols-3 gap-2 pt-2">
+                  <div class="bg-white dark:bg-[#112019] p-2.5 rounded-xl text-center border border-gray-200/70 dark:border-[#1F3D30]">
+                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj2_stat1_label">Core Modules</span>
+                    <span class="text-sm font-extrabold text-forest dark:text-[#64D8A4]">4</span>
+                  </div>
+                  <div class="bg-white dark:bg-[#112019] p-2.5 rounded-xl text-center border border-gray-200/70 dark:border-[#1F3D30]">
+                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj2_stat2_label">BOM Validation</span>
+                    <span class="text-sm font-extrabold text-amber-brand">100%</span>
+                  </div>
+                  <div class="bg-white dark:bg-[#112019] p-2.5 rounded-xl text-center border border-gray-200/70 dark:border-[#1F3D30]">
+                    <span class="text-[10px] text-slate dark:text-white/60 block" data-i18n="proj2_stat3_label">Business UAT</span>
+                    <span class="text-sm font-extrabold text-forest dark:text-[#64D8A4]">100%</span>
+                  </div>
+                </div>
               </div>
 
               <!-- Tool Tags & CTA -->
@@ -575,7 +666,7 @@
       </div>
     </section>
 
-    <!-- SECTION 3: ACHIEVEMENT SPOTLIGHT -->
+    <!-- SECTION 3: ACHIEVEMENT SPOTLIGHT (03) -->
     <section class="py-20 max-w-[1240px] mx-auto px-6" id="achievement">
       <div class="bg-gradient-to-r from-forest via-forest-dark to-[#092217] dark:from-[#0E281C] dark:via-[#091D14] dark:to-[#05110B] rounded-[32px] p-8 md:p-12 text-white shadow-xl relative overflow-hidden border border-[#1b563d] dark:border-[#1E4E37]">
         <!-- Background Decorative Accents -->
@@ -585,7 +676,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
           <div class="lg:col-span-8 space-y-4">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-brand text-ink font-black text-xs uppercase tracking-widest">
-              <span data-i18n="achieve_tag">🏆 Distinction Award</span>
+              <span data-i18n="achieve_tag">03 • Semifinalist Distinction</span>
             </div>
             <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight" data-i18n="achieve_title">
               Semifinalist – Gandeng Business Case Competition 2026
@@ -600,7 +691,7 @@
 
           <div class="lg:col-span-4 flex justify-start lg:justify-end">
             <div class="bg-white/10 dark:bg-black/30 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-6 text-center w-full max-w-xs shadow-inner">
-              <span class="text-4xl font-black text-amber-brand block mb-1" data-i18n="achieve_badge_top">Top Tier</span>
+              <span class="text-3xl font-black text-amber-brand block mb-1" data-i18n="achieve_badge_top">Semifinalist</span>
               <span class="text-white text-xs font-semibold uppercase tracking-wider block" data-i18n="achieve_badge_sub">National Semifinalist</span>
               <div class="mt-4 pt-4 border-t border-white/10 text-xs text-white/70" data-i18n="achieve_badge_eval">
                 Evaluated on strategic feasibility, analytical data depth, and financial modeling.
@@ -611,7 +702,7 @@
       </div>
     </section>
 
-    <!-- SECTION 4: LEADERSHIP & EXPERIENCE -->
+    <!-- SECTION 4: LEADERSHIP & EXPERIENCE (04) -->
     <section class="py-20 bg-white dark:bg-[#101C16] border-y border-gray-200/80 dark:border-[#1F3D30] transition-colors" id="experience">
       <div class="max-w-[1240px] mx-auto px-6">
         <!-- Section Header -->
@@ -628,7 +719,6 @@
         <div class="relative border-l-2 border-forest/30 dark:border-emerald-600/30 ml-4 md:ml-8 space-y-12">
           <!-- Experience 1 -->
           <div class="relative pl-8 md:pl-12 group">
-            <!-- Orange Dot Marker -->
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-brand border-4 border-forest dark:border-[#101C16] shadow-sm group-hover:scale-125 transition-transform"></div>
             <div class="bg-[#F8F8F5] dark:bg-[#15251E] p-7 rounded-3xl border border-gray-200/80 dark:border-[#1F3D30] hover:border-forest/40 dark:hover:border-amber-brand/40 transition-colors shadow-xs">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
@@ -675,7 +765,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: SKILLS MATRIX -->
+    <!-- SECTION 5: SKILLS MATRIX (05) -->
     <section class="py-24 max-w-[1240px] mx-auto px-6" id="skills">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest dark:bg-[#153828] text-amber-brand font-bold text-xs uppercase tracking-widest mb-3 border border-forest-light/40">
@@ -689,9 +779,9 @@
         </p>
       </div>
 
-      <!-- 4 Skill Cards Grid -->
+      <!-- Skills Grid (Reorganized into Core vs Learning + Evidence-backed Soft Skills) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Card 1: Technical -->
+        <!-- Card 1: Technical Stack (Core vs Learning) -->
         <div class="bg-white dark:bg-[#12211A] rounded-3xl p-7 border border-gray-200 dark:border-[#1F3D30] shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-all">
           <div>
             <div class="w-12 h-12 rounded-full bg-amber-brand flex items-center justify-center text-ink mb-6 shadow-sm">
@@ -699,16 +789,28 @@
                 <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-black text-ink dark:text-white mb-4" data-i18n="skill_group1_title">Technical Stack</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">SQL</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">Python</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">Pandas</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">Streamlit</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">Plotly</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">Power BI</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">Looker</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]">Git / GitHub</span>
+            <h3 class="text-xl font-black text-ink dark:text-white mb-3" data-i18n="skill_group1_title">Technical Stack</h3>
+            
+            <!-- Sub-group: Core -->
+            <div class="mb-4">
+              <span class="text-[11px] font-black uppercase tracking-wider text-forest dark:text-[#64D8A4] block mb-2" data-i18n="skill_core_badge">Core &amp; Hands-on</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-2.5 py-1 rounded-full border border-gray-200 dark:border-[#214334]">SQL</span>
+                <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-2.5 py-1 rounded-full border border-gray-200 dark:border-[#214334]">Python</span>
+                <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-2.5 py-1 rounded-full border border-gray-200 dark:border-[#214334]">Pandas</span>
+                <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-2.5 py-1 rounded-full border border-gray-200 dark:border-[#214334]">Streamlit</span>
+                <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-2.5 py-1 rounded-full border border-gray-200 dark:border-[#214334]">Plotly</span>
+                <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-2.5 py-1 rounded-full border border-gray-200 dark:border-[#214334]">Git / GitHub</span>
+              </div>
+            </div>
+
+            <!-- Sub-group: Learning / In Progress -->
+            <div>
+              <span class="text-[11px] font-black uppercase tracking-wider text-amber-contrast dark:text-amber-brand block mb-2" data-i18n="skill_learning_badge">Learning / In Progress</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-300 font-semibold text-xs px-2.5 py-1 rounded-full border border-amber-200 dark:border-amber-800/40">Power BI (In Progress)</span>
+                <span class="bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-300 font-semibold text-xs px-2.5 py-1 rounded-full border border-amber-200 dark:border-amber-800/40">Looker (In Progress)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -732,7 +834,7 @@
           </div>
         </div>
 
-        <!-- Card 3: Soft Skills -->
+        <!-- Card 3: Demonstrated Soft Skills (Evidence-backed) -->
         <div class="bg-white dark:bg-[#12211A] rounded-3xl p-7 border border-gray-200 dark:border-[#1F3D30] shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-all">
           <div>
             <div class="w-12 h-12 rounded-full bg-amber-brand flex items-center justify-center text-ink mb-6 shadow-sm">
@@ -740,12 +842,20 @@
                 <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-black text-ink dark:text-white mb-4" data-i18n="skill_group3_title">Soft Skills</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]" data-i18n="skill_soft1">Problem Solving</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]" data-i18n="skill_soft2">Leadership</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]" data-i18n="skill_soft3">Strategic Comms</span>
-              <span class="bg-[#F8F8F5] dark:bg-[#172B22] text-forest dark:text-[#76E4B1] font-bold text-xs px-3 py-1.5 rounded-full border border-gray-200 dark:border-[#214334]" data-i18n="skill_soft4">Critical Thinking</span>
+            <h3 class="text-xl font-black text-ink dark:text-white mb-3" data-i18n="skill_group3_title">Demonstrated Soft Skills</h3>
+            <div class="space-y-2.5 text-xs">
+              <div class="p-2 bg-[#F8F8F5] dark:bg-[#172B22] rounded-xl border border-gray-200/60 dark:border-[#214334]">
+                <strong class="text-forest dark:text-amber-brand block" data-i18n="skill_soft1_title">Cross-Functional Team Leadership</strong>
+                <span class="text-slate dark:text-white/70" data-i18n="skill_soft1_desc">Led a 4-member independent election supervisory team.</span>
+              </div>
+              <div class="p-2 bg-[#F8F8F5] dark:bg-[#172B22] rounded-xl border border-gray-200/60 dark:border-[#214334]">
+                <strong class="text-forest dark:text-amber-brand block" data-i18n="skill_soft2_title">Operational Coordination &amp; Logistics</strong>
+                <span class="text-slate dark:text-white/70" data-i18n="skill_soft2_desc">Orchestrated staging and vendor logistics at UKM EXPO.</span>
+              </div>
+              <div class="p-2 bg-[#F8F8F5] dark:bg-[#172B22] rounded-xl border border-gray-200/60 dark:border-[#214334]">
+                <strong class="text-forest dark:text-amber-brand block" data-i18n="skill_soft3_title">Stakeholder Engagement &amp; Mentorship</strong>
+                <span class="text-slate dark:text-white/70" data-i18n="skill_soft3_desc">Coordinated student empowerment programs in HIMA SI.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -804,7 +914,7 @@
             <span>vickyjunihendri@gmail.com</span>
           </a>
 
-          <!-- Social Icons -->
+          <!-- Social Icons (GitHub points to https://github.com/ckyy-lab as required) -->
           <div class="flex items-center justify-center gap-3">
             <!-- LinkedIn -->
             <a aria-label="LinkedIn" class="w-13 h-13 p-3.5 rounded-full bg-white/10 hover:bg-amber-brand hover:text-ink text-white border border-white/20 transition-all flex items-center justify-center" href="https://linkedin.com/in/vicky-juni-hendri/" rel="noopener noreferrer" target="_blank">
@@ -813,7 +923,7 @@
               </svg>
             </a>
             <!-- GitHub -->
-            <a aria-label="GitHub" class="w-13 h-13 p-3.5 rounded-full bg-white/10 hover:bg-amber-brand hover:text-ink text-white border border-white/20 transition-all flex items-center justify-center" href="https://github.com" rel="noopener noreferrer" target="_blank">
+            <a aria-label="GitHub" class="w-13 h-13 p-3.5 rounded-full bg-white/10 hover:bg-amber-brand hover:text-ink text-white border border-white/20 transition-all flex items-center justify-center" href="https://github.com/ckyy-lab" rel="noopener noreferrer" target="_blank">
               <svg class="w-5 h-5 fill-currentColor" viewBox="0 0 24 24">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
               </svg>
@@ -840,79 +950,222 @@
     </svg>
   </button>
 
-  <!-- MODAL 1: MBG DASHBOARD CASE STUDY -->
-  <div id="modal-mbg" class="modal-dialog hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/70 modal-overlay modal-enter" role="dialog" aria-modal="true">
-    <div class="bg-white dark:bg-[#12211A] text-ink dark:text-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 border border-gray-200 dark:border-[#1F3D30] shadow-2xl modal-content-enter relative">
+  <!-- MODAL 1: MBG DASHBOARD CASE STUDY (Restructured per instructions) -->
+  <div id="modal-mbg" class="modal-dialog hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/70 modal-overlay modal-enter" role="dialog" aria-modal="true" aria-labelledby="mbg-modal-title">
+    <div class="bg-white dark:bg-[#12211A] text-ink dark:text-white rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-y-auto p-6 md:p-8 border border-gray-200 dark:border-[#1F3D30] shadow-2xl modal-content-enter relative">
       <!-- Close button -->
-      <button type="button" data-close-modal class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 flex items-center justify-center text-ink dark:text-white transition-colors">
+      <button type="button" data-close-modal class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 flex items-center justify-center text-ink dark:text-white transition-colors" aria-label="Close modal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
 
-      <div class="pr-8">
-        <div class="flex flex-wrap items-center gap-2 mb-2">
+      <!-- Header & Badges -->
+      <div class="pr-8 space-y-2">
+        <div class="flex flex-wrap items-center gap-2">
           <span class="inline-block px-3 py-1 rounded-full bg-forest/10 dark:bg-forest/40 text-forest dark:text-amber-brand text-xs font-bold uppercase tracking-wider" data-i18n="proj1_badge">BI Dashboard</span>
-      
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-brand text-ink text-xs font-black shadow-xs" data-i18n="mbg_modal_badge_group">Group Project • 4 Members</span>
+          <a href="https://dashboard-mbg-kelompok-4.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-xs font-extrabold hover:scale-105 transition-transform border border-emerald-300/40">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse-dot"></span>
+            <span data-i18n="mbg_live_demo">Live Streamlit App ↗</span>
+          </a>
         </div>
-        <h3 class="text-2xl md:text-3xl font-extrabold text-ink dark:text-white" data-i18n="mbg_modal_title">Nutritious Meal Program (MBG) – BI Dashboard</h3>
-        <p class="text-xs font-bold text-amber-brand mt-1" data-i18n="mbg_modal_role">Data &amp; BI Analyst • Streamlit &amp; Python</p>
+        <h3 id="mbg-modal-title" class="text-2xl md:text-3xl font-extrabold text-ink dark:text-white" data-i18n="mbg_modal_title">Nutritious Meal Program (MBG) – BI Dashboard</h3>
+        <p class="text-xs font-bold text-amber-contrast dark:text-amber-brand" data-i18n="mbg_modal_role">Data &amp; BI Analyst • Streamlit &amp; Python</p>
       </div>
 
+      <!-- Restructured Body Sections -->
       <div class="mt-6 space-y-6 text-sm leading-relaxed">
-        <div>
-          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand" data-i18n="modal_overview">Project Overview</h4>
-          <p class="text-slate dark:text-[#9BA9A2]" data-i18n="mbg_modal_p1">
-            Developed an interactive Business Intelligence solution to monitor and analyze operational distribution of nutritious meals across dozens of regions. With over 5,000+ transactional records ingested, the platform eliminates reporting bottlenecks.
+        
+        <!-- 1. Overview -->
+        <div class="p-4 bg-[#F8F8F5] dark:bg-[#162920] rounded-2xl border border-gray-200/80 dark:border-[#1F3D30]">
+          <h4 class="font-extrabold text-base mb-1.5 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="modal_overview">Overview</span>
+          </h4>
+          <p class="text-slate dark:text-[#9BA9A2]" data-i18n="mbg_overview_text">
+            Interactive Business Intelligence solution developed to monitor and analyze the operational distribution of nutritious meals across 38 provinces in Indonesia. Built collaboratively to eliminate reporting bottlenecks and provide actionable geospatial insights.
           </p>
         </div>
 
+        <!-- 2. Problem Statement -->
         <div>
-          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand">Key Engineering Highlights</h4>
-          <ul class="space-y-2 text-slate dark:text-[#9BA9A2] list-disc list-inside">
-            <li data-i18n="mbg_modal_f1">Custom ETL pipeline built with Python &amp; Pandas automating messy CSV/SQL exports.</li>
-            <li data-i18n="mbg_modal_f2">Dynamic choropleth heatmaps created with Plotly to visualize regional delivery density.</li>
-            <li data-i18n="mbg_modal_f3">Drill-down filters by district, distribution date, and vendor efficiency.</li>
+          <h4 class="font-extrabold text-base mb-1.5 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="modal_problem">Problem Statement</span>
+          </h4>
+          <p class="text-slate dark:text-[#9BA9A2]" data-i18n="mbg_problem_text">
+            Monitoring meal distribution across 38 geographically fragmented provinces presented significant challenges in detecting localized distribution bottlenecks, regional cost variances, and operational anomalies from thousands of raw operational logs.
+          </p>
+        </div>
+
+        <!-- 3. Data & Methodology -->
+        <div>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="modal_data_method">Data &amp; Methodology</span>
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+            <div class="p-3 bg-[#F8F8F5] dark:bg-[#162920] rounded-xl border border-gray-200/80 dark:border-[#1F3D30]">
+              <span class="text-[11px] font-bold text-slate dark:text-white/60 block uppercase tracking-wider" data-i18n="mbg_data_source_label">Data Source</span>
+              <span class="font-extrabold text-forest dark:text-amber-brand text-xs" data-i18n="mbg_data_source_val">Public Dataset</span>
+            </div>
+            <div class="p-3 bg-[#F8F8F5] dark:bg-[#162920] rounded-xl border border-gray-200/80 dark:border-[#1F3D30]">
+              <span class="text-[11px] font-bold text-slate dark:text-white/60 block uppercase tracking-wider" data-i18n="mbg_data_scope_label">Regional Scope</span>
+              <span class="font-extrabold text-forest dark:text-amber-brand text-xs" data-i18n="mbg_data_scope_val">38 Provinces (National Scale)</span>
+            </div>
+            <div class="p-3 bg-[#F8F8F5] dark:bg-[#162920] rounded-xl border border-gray-200/80 dark:border-[#1F3D30]">
+              <span class="text-[11px] font-bold text-slate dark:text-white/60 block uppercase tracking-wider" data-i18n="mbg_data_records_label">Volume</span>
+              <span class="font-extrabold text-forest dark:text-amber-brand text-xs" data-i18n="mbg_data_records_val">5,000+ Cleaned Records</span>
+            </div>
+          </div>
+
+          <!-- Definitions Callout -->
+          <div class="space-y-2 text-xs">
+            <div class="p-3 bg-white dark:bg-[#112019] rounded-xl border border-gray-200 dark:border-[#1F3D30]">
+              <strong class="text-forest dark:text-amber-brand" data-i18n="mbg_anomaly_def_label">Anomaly Definition:</strong>
+              <p class="text-slate dark:text-[#9BA9A2] mt-0.5" data-i18n="mbg_anomaly_def_val">
+                An extreme deviation or irregularity departing from normal distribution standards or baseline trends, specifically statistical outliers exceeding the majority of regional records.
+              </p>
+            </div>
+            <div class="p-3 bg-white dark:bg-[#112019] rounded-xl border border-gray-200 dark:border-[#1F3D30]">
+              <strong class="text-forest dark:text-amber-brand" data-i18n="mbg_cost_method_label">Daily Cost Estimation Formula:</strong>
+              <p class="text-slate dark:text-[#9BA9A2] mt-0.5" data-i18n="mbg_cost_method_val">
+                Calculated by dividing total operational expenditures within a designated period by the exact count of working or calendar days within that respective timeframe.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. My Role & Contributions (Active Verbs) -->
+        <div>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="modal_my_role">My Role &amp; Contributions</span>
+          </h4>
+          <ul class="space-y-2.5 text-slate dark:text-[#9BA9A2]">
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30]">
+              <span class="w-5 h-5 rounded-full bg-forest text-amber-brand flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5">1</span>
+              <span data-i18n="mbg_role_item1">Engineered Anomaly Ratio by Province: Analyzed and mapped the percentage of regencies/cities exhibiting anomalous distribution patterns across each province.</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30]">
+              <span class="w-5 h-5 rounded-full bg-forest text-amber-brand flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5">2</span>
+              <span data-i18n="mbg_role_item2">Built Catering Distribution Density by Province: Contrasted catering distribution facility density against daily estimated catering expenditures across 38 provinces.</span>
+            </li>
           </ul>
         </div>
 
-        <div class="grid grid-cols-3 gap-3 bg-[#F8F8F5] dark:bg-[#162920] p-4 rounded-2xl border border-gray-200/80 dark:border-[#1F3D30] text-center">
-          <div>
-            <span class="text-lg font-black text-forest dark:text-amber-brand block">5,000+</span>
-            <span class="text-[11px] text-slate dark:text-white/70 font-semibold" data-i18n="mbg_stat1">5,000+ Records Cleaned</span>
-          </div>
-          <div>
-            <span class="text-lg font-black text-amber-brand block">94.8%</span>
-            <span class="text-[11px] text-slate dark:text-white/70 font-semibold" data-i18n="mbg_stat2">94.8% Delivery Accuracy</span>
-          </div>
-          <div>
-            <span class="text-lg font-black text-forest dark:text-amber-brand block">38 Kab</span>
-            <span class="text-[11px] text-slate dark:text-white/70 font-semibold" data-i18n="mbg_stat3">38 District Coverage</span>
+        <!-- 5. Key Insights (From Fact Data) -->
+        <div>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="modal_key_insights">Key Insights</span>
+          </h4>
+          <div class="space-y-3">
+            <div class="p-3.5 bg-amber-50/60 dark:bg-amber-950/20 rounded-xl border border-amber-200/70 dark:border-amber-800/40 text-xs">
+              <strong class="text-amber-900 dark:text-amber-300 block font-black text-sm mb-1" data-i18n="mbg_insight1_title">Insight 1: Innovation Rate Disparity (Rate Inovasi per Faceted)</strong>
+              <p class="text-slate dark:text-[#C5D2CB] leading-relaxed" data-i18n="mbg_insight1_text">
+                Analysis reveals severe disparity where innovation is overwhelmingly dominated by a single top category (~65%–70%), while the secondary category trails at ~25% and remaining categories decline sharply below 10% toward 0%. This heavy concentration emphasizes reliance on a single core engine, recommending bottom-tier incentive programs while sustaining prime sector performance.
+              </p>
+            </div>
+            <div class="p-3.5 bg-amber-50/60 dark:bg-amber-950/20 rounded-xl border border-amber-200/70 dark:border-amber-800/40 text-xs">
+              <strong class="text-amber-900 dark:text-amber-300 block font-black text-sm mb-1" data-i18n="mbg_insight2_title">Insight 2: Sectoral Concentration &amp; Long-Tail Dynamics</strong>
+              <p class="text-slate dark:text-[#C5D2CB] leading-relaxed" data-i18n="mbg_insight2_text">
+                The distribution confirms acute sectoral concentration in the computing/informatics domain (65%–70%), far surpassing second tier (~25%) and third tier (<20%). This steep drop-off demonstrates a pronounced long-tail dynamic, signaling potential bottlenecks in broader cross-sectoral operational scalability.
+              </p>
+            </div>
           </div>
         </div>
 
+        <!-- 6. Project Visualizations Gallery (Click to Enlarge) -->
+        <div id="mbg-screenshots-section">
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center justify-between">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+              <span data-i18n="modal_gallery">Project Gallery (Click to enlarge)</span>
+            </span>
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Screenshot 1 -->
+            <button type="button" data-lightbox-src="assets/images/mbg-anomaly.png" data-lightbox-caption="Chart 1: Anomaly Ratio by Province" class="group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all">
+              <div class="h-36 rounded-xl overflow-hidden bg-gray-100 dark:bg-[#112019] relative flex items-center justify-center">
+                <img 
+                  src="assets/images/mbg-anomaly.png" 
+                  alt="Chart 1: Anomaly Ratio by Province" 
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden flex flex-col items-center justify-center text-center p-3 w-full h-full">
+                  <svg class="w-6 h-6 text-amber-brand mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                  <span class="text-xs font-bold text-forest dark:text-white">Chart 1: Anomaly Ratio</span>
+                  <span class="text-[10px] text-slate dark:text-white/60">assets/images/mbg-anomaly.png</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-forest dark:text-amber-brand block mt-2" data-i18n="mbg_chart1_caption">Chart 1: Anomaly Ratio by Province</span>
+            </button>
+
+            <!-- Screenshot 2 -->
+            <button type="button" data-lightbox-src="assets/images/mbg-density.png" data-lightbox-caption="Chart 2: Catering Distribution Density vs Daily Cost" class="group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all">
+              <div class="h-36 rounded-xl overflow-hidden bg-gray-100 dark:bg-[#112019] relative flex items-center justify-center">
+                <img 
+                  src="assets/images/mbg-density.png" 
+                  alt="Chart 2: Catering Distribution Density vs Daily Cost" 
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden flex flex-col items-center justify-center text-center p-3 w-full h-full">
+                  <svg class="w-6 h-6 text-emerald-500 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                  <span class="text-xs font-bold text-forest dark:text-white">Chart 2: Catering Density</span>
+                  <span class="text-[10px] text-slate dark:text-white/60">assets/images/mbg-density.png</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-forest dark:text-amber-brand block mt-2" data-i18n="mbg_chart2_caption">Chart 2: Catering Distribution Density vs Daily Cost</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. Technologies Used -->
         <div>
-          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand" data-i18n="modal_technologies">Technologies Used</h4>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="modal_technologies">Technologies Used</span>
+          </h4>
           <div class="flex flex-wrap gap-2">
             <span class="bg-forest text-white text-xs font-semibold px-3 py-1.5 rounded-full">Python</span>
             <span class="bg-forest text-white text-xs font-semibold px-3 py-1.5 rounded-full">Streamlit</span>
             <span class="bg-forest text-white text-xs font-semibold px-3 py-1.5 rounded-full">Pandas</span>
-            <span class="bg-amber-brand text-ink text-xs font-extrabold px-3 py-1.5 rounded-full">Plotly Express</span>
+            <span class="bg-amber-brand text-ink text-xs font-extrabold px-3 py-1.5 rounded-full">Plotly Geo</span>
             <span class="bg-forest text-white text-xs font-semibold px-3 py-1.5 rounded-full">ETL Pipelines</span>
           </div>
         </div>
+
+        <!-- 8. Hosting Wakeup Notice -->
+        <div class="p-3 bg-amber-100/60 dark:bg-amber-950/40 rounded-xl border border-amber-300/60 dark:border-amber-800/60 text-xs text-ink dark:text-amber-200 flex items-center gap-2">
+          <svg class="w-4 h-4 text-amber-700 dark:text-amber-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span data-i18n="mbg_hosting_notice">The live app may take a few seconds to wake up (free hosting).</span>
+        </div>
       </div>
 
-      <div class="mt-8 pt-4 border-t border-gray-200 dark:border-[#1F3D30] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-        <a href="https://dashboard-mbg-kelompok-4.streamlit.app/" target="_blank" rel="noopener noreferrer" class="bg-amber-brand hover:bg-amber-soft text-ink font-black text-sm px-6 py-2.5 rounded-full flex items-center justify-center gap-2 transition-all shadow-md hover:scale-[1.02]">
-          <svg class="w-4 h-4 text-red-600 fill-current" viewBox="0 0 24 24">
-            <path d="M16.634 8.766L23.999 15.688H15.02L12.012 12.825L16.634 8.766ZM7.366 8.766L0 15.688H8.98L11.988 12.825L7.366 8.766ZM12 0L4.354 7.37L12 14.739L19.646 7.37L12 0Z"/>
-          </svg>
-          <span data-i18n="mbg_modal_live_btn">Open Live Streamlit App</span>
-          <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-          </svg>
-        </a>
+      <!-- Action Footer with Links -->
+      <div class="mt-8 pt-4 border-t border-gray-200 dark:border-[#1F3D30] flex flex-wrap items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Primary Streamlit Button -->
+          <a href="https://dashboard-mbg-kelompok-4.streamlit.app/" target="_blank" rel="noopener noreferrer" class="bg-amber-brand hover:bg-amber-soft text-ink font-black text-sm px-5 py-2.5 rounded-full flex items-center justify-center gap-2 transition-all shadow-md hover:scale-[1.02]">
+            <svg class="w-4 h-4 text-red-600 fill-current" viewBox="0 0 24 24">
+              <path d="M16.634 8.766L23.999 15.688H15.02L12.012 12.825L16.634 8.766ZM7.366 8.766L0 15.688H8.98L11.988 12.825L7.366 8.766ZM12 0L4.354 7.37L12 14.739L19.646 7.37L12 0Z"/>
+            </svg>
+            <span data-i18n="mbg_modal_live_btn">Open Live Streamlit App ↗</span>
+          </a>
+
+          <!-- Source Code Link -->
+          <a href="[ISI URL REPO]" target="_blank" rel="noopener noreferrer" class="border border-forest dark:border-white/30 text-forest dark:text-white font-bold text-xs px-4 py-2.5 rounded-full hover:bg-forest/10 dark:hover:bg-white/10 transition-colors flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+            <span data-i18n="mbg_source_code_btn">Source Code ↗</span>
+          </a>
+        </div>
+
         <button type="button" data-close-modal class="bg-forest hover:bg-forest-dark text-white font-bold text-sm px-6 py-2.5 rounded-full transition-all" data-i18n="modal_close">
           Close
         </button>
@@ -920,11 +1173,11 @@
     </div>
   </div>
 
-  <!-- MODAL 2: ERP CASE STUDY -->
-  <div id="modal-erp" class="modal-dialog hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/70 modal-overlay modal-enter" role="dialog" aria-modal="true">
+  <!-- MODAL 2: ERP CASE STUDY (Restructured per instructions) -->
+  <div id="modal-erp" class="modal-dialog hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/70 modal-overlay modal-enter" role="dialog" aria-modal="true" aria-labelledby="erp-modal-title">
     <div class="bg-white dark:bg-[#12211A] text-ink dark:text-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 border border-gray-200 dark:border-[#1F3D30] shadow-2xl modal-content-enter relative">
       <!-- Close button -->
-      <button type="button" data-close-modal class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 flex items-center justify-center text-ink dark:text-white transition-colors">
+      <button type="button" data-close-modal class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 flex items-center justify-center text-ink dark:text-white transition-colors" aria-label="Close modal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
@@ -932,44 +1185,145 @@
 
       <div class="pr-8">
         <span class="inline-block px-3 py-1 rounded-full bg-forest/10 dark:bg-forest/40 text-forest dark:text-amber-brand text-xs font-bold uppercase tracking-wider mb-2" data-i18n="proj2_badge">ERP &amp; BPMN</span>
-        <h3 class="text-2xl md:text-3xl font-extrabold text-ink dark:text-white" data-i18n="erp_modal_title">ERP Supply Chain Implementation – B2RP Collection</h3>
-        <p class="text-xs font-bold text-amber-brand mt-1" data-i18n="erp_modal_role">ERP Specialist &amp; Business Process Analyst • Odoo 17</p>
+        <h3 id="erp-modal-title" class="text-2xl md:text-3xl font-extrabold text-ink dark:text-white" data-i18n="erp_modal_title">ERP Supply Chain Implementation – B2RP Collection</h3>
+        <p class="text-xs font-bold text-amber-contrast dark:text-amber-brand mt-1" data-i18n="erp_modal_role">ERP Specialist &amp; Business Process Analyst • Odoo 17</p>
       </div>
 
       <div class="mt-6 space-y-6 text-sm leading-relaxed">
+        <!-- Problem -->
         <div>
-          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand" data-i18n="modal_overview">Project Overview</h4>
-          <p class="text-slate dark:text-[#9BA9A2]" data-i18n="erp_modal_p1">
-            Architected and simulated the complete enterprise supply chain for retail apparel brand B2RP Collection using Odoo 17 Enterprise. Redesigned standard operations into optimized BPMN 2.0 workflows.
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="erp_problem_title">Problem Statement</span>
+          </h4>
+          <p class="text-slate dark:text-[#9BA9A2]" data-i18n="erp_problem_text">
+            Retail apparel brand B2RP Collection struggled with fragmented operational silos between manual purchasing, decentralized stock counts, and disjointed sales orders, causing fulfillment delays and inventory inaccuracies.
           </p>
         </div>
 
+        <!-- My Role & Execution -->
         <div>
-          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand">Enterprise Architecture Highlights</h4>
-          <ul class="space-y-2 text-slate dark:text-[#9BA9A2] list-disc list-inside">
-            <li data-i18n="erp_modal_f1">Unified Procure-to-Pay (P2P) and Order-to-Cash (O2C) flows with multi-level approvals.</li>
-            <li data-i18n="erp_modal_f2">Automated Bill of Materials (BOM) calculation and real-time inventory reordering rules.</li>
-            <li data-i18n="erp_modal_f3">Seamless synchronization between inventory movements and PostgreSQL database ledger.</li>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="erp_my_role_title">My Role &amp; Execution</span>
+          </h4>
+          <p class="text-slate dark:text-[#9BA9A2] mb-3" data-i18n="erp_my_role_text">
+            Designed end-to-end supply chain processes in Odoo 17 Enterprise; structured and aligned Procure-to-Pay (P2P), Order-to-Cash (O2C), and production workflows using BPMN 2.0; and configured PostgreSQL database synchronization.
+          </p>
+          <ul class="space-y-2 text-slate dark:text-[#9BA9A2] list-disc list-inside text-xs">
+            <li data-i18n="erp_f1">Unified Procure-to-Pay (P2P) and Order-to-Cash (O2C) flows with multi-level approvals.</li>
+            <li data-i18n="erp_f2">Configured automated Bill of Materials (BOM) and dynamic reordering rules.</li>
+            <li data-i18n="erp_f3">Synchronized inventory movements with relational database ledger.</li>
           </ul>
         </div>
 
-        <div class="grid grid-cols-3 gap-3 bg-[#F8F8F5] dark:bg-[#162920] p-4 rounded-2xl border border-gray-200/80 dark:border-[#1F3D30] text-center">
-          <div>
-            <span class="text-lg font-black text-forest dark:text-amber-brand block">4</span>
-            <span class="text-[11px] text-slate dark:text-white/70 font-semibold" data-i18n="erp_stat1">4 Core Modules Integrated</span>
-          </div>
-          <div>
-            <span class="text-lg font-black text-amber-brand block">100%</span>
-            <span class="text-[11px] text-slate dark:text-white/70 font-semibold" data-i18n="erp_stat2">100% Traceability across BOM</span>
-          </div>
-          <div>
-            <span class="text-lg font-black text-forest dark:text-amber-brand block">BPMN 2.0</span>
-            <span class="text-[11px] text-slate dark:text-white/70 font-semibold" data-i18n="erp_stat3">BPMN 2.0 Compliant</span>
+        <!-- Result & Verification Metrics -->
+        <div>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="erp_result_title">Key Results &amp; Verification</span>
+          </h4>
+          <div class="grid grid-cols-3 gap-3 bg-[#F8F8F5] dark:bg-[#162920] p-4 rounded-2xl border border-gray-200/80 dark:border-[#1F3D30] text-center">
+            <div>
+              <span class="text-2xl font-black text-forest dark:text-amber-brand block">4</span>
+              <span class="text-[11px] text-slate dark:text-white/70 font-semibold leading-tight block mt-0.5" data-i18n="erp_stat1">4 Core Modules Integrated</span>
+            </div>
+            <div>
+              <span class="text-2xl font-black text-amber-contrast dark:text-amber-brand block">100%</span>
+              <span class="text-[11px] text-slate dark:text-white/70 font-semibold leading-tight block mt-0.5" data-i18n="erp_stat2">Accurate BOM Validation</span>
+            </div>
+            <div>
+              <span class="text-2xl font-black text-forest dark:text-[#64D8A4] block">100%</span>
+              <span class="text-[11px] text-slate dark:text-white/70 font-semibold leading-tight block mt-0.5" data-i18n="erp_stat3">Business Flow UAT Passed</span>
+            </div>
           </div>
         </div>
 
+        <!-- Odoo 17 Enterprise Dashboard Showcase -->
         <div>
-          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand" data-i18n="modal_technologies">Technologies Used</h4>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="erp_dashboard_title">Odoo 17 Enterprise Dashboard</span>
+          </h4>
+          <button type="button" data-lightbox-src="assets/images/erp-dashboard.png" data-lightbox-caption="Odoo 17 Enterprise Live Operational Dashboard" class="w-full group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all block cursor-pointer">
+            <div class="h-44 sm:h-56 rounded-xl overflow-hidden bg-white dark:bg-[#112019] relative flex items-center justify-center p-1 border border-gray-200/60 dark:border-[#1F3D30]">
+              <img 
+                src="assets/images/erp-dashboard.png" 
+                alt="Odoo 17 Enterprise Dashboard Screenshot" 
+                loading="lazy" 
+                class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform"
+                onerror="this.style.display='none';">
+            </div>
+            <div class="flex items-center justify-between mt-2 px-1">
+              <span class="text-xs font-bold text-forest dark:text-amber-brand" data-i18n="erp_odoo_caption">Odoo 17 Enterprise Operations</span>
+              <span class="text-[10px] text-slate dark:text-white/60 font-semibold" data-i18n="modal_click_zoom">Click to enlarge ↗</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Architecture & Diagrams Gallery (With Real BPMN Diagrams) -->
+        <div>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="erp_gallery_title">Process &amp; System Architecture (Click to enlarge)</span>
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <!-- Diagram 1: Produce-to-Stock -->
+            <button type="button" data-lightbox-src="assets/images/erp-produce-to-stock.png" data-lightbox-caption="Diagram To-Be Produce-to-Stock (P2S)" class="group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all">
+              <div class="h-28 rounded-xl overflow-hidden bg-white dark:bg-[#112019] relative flex items-center justify-center p-1 border border-gray-200/60 dark:border-[#1F3D30]">
+                <img 
+                  src="assets/images/erp-produce-to-stock.png" 
+                  alt="Diagram To-Be Produce-to-Stock" 
+                  loading="lazy" 
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                  onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden flex flex-col items-center justify-center text-center p-2 w-full h-full">
+                  <span class="text-xs font-bold text-forest dark:text-white">Produce-to-Stock</span>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-forest dark:text-amber-brand block mt-2" data-i18n="erp_p2s_caption">To-Be Produce-to-Stock (P2S) Workflow</span>
+            </button>
+
+            <!-- Diagram 2: Order-to-Cash -->
+            <button type="button" data-lightbox-src="assets/images/erp-order-to-cash.png" data-lightbox-caption="Diagram To-Be Order-to-Cash (O2C)" class="group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all">
+              <div class="h-28 rounded-xl overflow-hidden bg-white dark:bg-[#112019] relative flex items-center justify-center p-1 border border-gray-200/60 dark:border-[#1F3D30]">
+                <img 
+                  src="assets/images/erp-order-to-cash.png" 
+                  alt="Diagram To-Be Order-to-Cash" 
+                  loading="lazy" 
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                  onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden flex flex-col items-center justify-center text-center p-2 w-full h-full">
+                  <span class="text-xs font-bold text-forest dark:text-white">Order-to-Cash</span>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-forest dark:text-amber-brand block mt-2" data-i18n="erp_o2c_caption">To-Be Order-to-Cash (O2C) Workflow</span>
+            </button>
+
+            <!-- Diagram 3: Procure-to-Pay -->
+            <button type="button" data-lightbox-src="assets/images/erp-procure-to-pay.png" data-lightbox-caption="Diagram To-Be Procure-to-Pay (P2P)" class="group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all">
+              <div class="h-28 rounded-xl overflow-hidden bg-white dark:bg-[#112019] relative flex items-center justify-center p-1 border border-gray-200/60 dark:border-[#1F3D30]">
+                <img 
+                  src="assets/images/erp-procure-to-pay.png" 
+                  alt="Diagram To-Be Procure-to-Pay" 
+                  loading="lazy" 
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                  onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden flex flex-col items-center justify-center text-center p-2 w-full h-full">
+                  <span class="text-xs font-bold text-forest dark:text-white">Procure-to-Pay</span>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-forest dark:text-amber-brand block mt-2" data-i18n="erp_p2p_caption">To-Be Procure-to-Pay (P2P) Workflow</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Technologies -->
+        <div>
+          <h4 class="font-extrabold text-base mb-2 text-forest dark:text-amber-brand flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-brand"></span>
+            <span data-i18n="modal_technologies">Technologies Used</span>
+          </h4>
           <div class="flex flex-wrap gap-2">
             <span class="bg-forest text-white text-xs font-semibold px-3 py-1.5 rounded-full">Odoo 17</span>
             <span class="bg-forest text-white text-xs font-semibold px-3 py-1.5 rounded-full">PostgreSQL</span>
@@ -988,10 +1342,10 @@
   </div>
 
   <!-- MODAL 3: CV PREVIEW & DOWNLOAD -->
-  <div id="modal-cv" class="modal-dialog hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/70 modal-overlay modal-enter" role="dialog" aria-modal="true">
+  <div id="modal-cv" class="modal-dialog hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/70 modal-overlay modal-enter" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
     <div class="bg-white dark:bg-[#12211A] text-ink dark:text-white rounded-3xl max-w-lg w-full p-6 md:p-8 border border-gray-200 dark:border-[#1F3D30] shadow-2xl modal-content-enter relative">
       <!-- Close button -->
-      <button type="button" data-close-modal class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 flex items-center justify-center text-ink dark:text-white transition-colors">
+      <button type="button" data-close-modal class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 flex items-center justify-center text-ink dark:text-white transition-colors" aria-label="Close modal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
@@ -1004,8 +1358,8 @@
           </svg>
         </div>
         <div>
-          <h3 class="text-xl font-extrabold text-ink dark:text-white" data-i18n="cv_modal_title">Curriculum Vitae</h3>
-          <p class="text-xs text-amber-brand font-semibold" data-i18n="cv_modal_subtitle">Information Systems Undergraduate</p>
+          <h3 id="cv-modal-title" class="text-xl font-extrabold text-ink dark:text-white" data-i18n="cv_modal_title">Curriculum Vitae</h3>
+          <p class="text-xs text-amber-contrast dark:text-amber-brand font-semibold" data-i18n="cv_modal_subtitle">Information Systems Undergraduate</p>
         </div>
       </div>
 
@@ -1016,24 +1370,46 @@
             Information Systems undergraduate with hands-on experience in data analysis, Business Intelligence, and process analysis. Proficient in Python, SQL, Streamlit, Plotly, and Odoo 17 ERP.
           </p>
         </div>
-        <div class="text-xs space-y-1">
+        <div class="text-xs space-y-1.5 p-3 rounded-xl bg-white dark:bg-[#112019] border border-gray-200/70 dark:border-[#1F3D30]">
           <div><strong class="text-ink dark:text-white">Email:</strong> vickyjunihendri@gmail.com</div>
           <div><strong class="text-ink dark:text-white">Location:</strong> Depok, Indonesia</div>
           <div><strong class="text-ink dark:text-white">GPA:</strong> 3.84 / 4.00 (UPN Veteran Jakarta)</div>
+          <div><strong class="text-ink dark:text-white">File:</strong> assets/cv/Vicky-Juni-Hendri-CV.pdf</div>
         </div>
       </div>
 
+      <!-- Action Buttons (Direct PDF Download as Primary) -->
       <div class="flex flex-col sm:flex-row gap-3 pt-2">
-        <a href="mailto:vickyjunihendri@gmail.com?subject=Inquiry%20regarding%20Vicky%20Juni%20Hendri%20CV" class="flex-1 bg-forest hover:bg-forest-dark text-white font-bold text-sm py-3 px-5 rounded-full text-center transition-colors flex items-center justify-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <a href="assets/cv/Vicky-Juni-Hendri-CV.pdf" download="Vicky-Juni-Hendri-CV.pdf" class="flex-1 bg-amber-brand hover:bg-amber-soft text-ink font-black text-sm py-3 px-5 rounded-full text-center transition-all shadow-md flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4m-8 8h16"></path>
+          </svg>
+          <span data-i18n="cv_download_btn">Download PDF CV</span>
+        </a>
+        <a href="mailto:vickyjunihendri@gmail.com?subject=Inquiry%20regarding%20Vicky%20Juni%20Hendri%20CV" class="bg-forest hover:bg-forest-dark text-white font-bold text-xs py-3 px-5 rounded-full text-center transition-colors flex items-center justify-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>
           <span data-i18n="cv_contact_direct">Contact via Email</span>
         </a>
-        <button type="button" data-close-modal class="border border-forest dark:border-white/30 text-forest dark:text-white font-bold text-sm py-3 px-6 rounded-full hover:bg-forest/10 dark:hover:bg-white/10 transition-colors" data-i18n="modal_close">
-          Close
-        </button>
       </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: IMAGE LIGHTBOX MODAL (For click-to-enlarge gallery inspection) -->
+  <div id="modal-lightbox" class="modal-dialog hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/85 lightbox-modal modal-enter" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <div class="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center modal-content-enter">
+      <!-- Close button -->
+      <button type="button" data-close-modal class="absolute -top-12 right-0 sm:right-0 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" aria-label="Close image preview">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      
+      <div class="w-full bg-[#12211A] rounded-2xl overflow-hidden border border-white/20 shadow-2xl flex items-center justify-center max-h-[80vh]">
+        <img id="lightbox-img" src="" alt="Full size preview" class="w-full h-auto max-h-[78vh] object-contain">
+      </div>
+      <p id="lightbox-caption" class="text-white/80 font-bold text-sm mt-3 text-center"></p>
     </div>
   </div>
 

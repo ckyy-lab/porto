@@ -20,6 +20,7 @@
       nav_achievement: 'Achievement',
       nav_experience: 'Experience',
       nav_skills: 'Skills',
+      nav_cv: 'CV',
       nav_contact: 'Contact Me',
       
       // Hero
@@ -27,9 +28,10 @@
       hero_headline: 'I\'m <span class="italic text-amber-brand underline decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Information Systems Student Focused on Data & BI.',
       hero_bio: 'Information Systems undergraduate with hands-on experience in data analysis, Business Intelligence, and process analysis. I turn operational data into KPI dashboards and insights using Python, SQL, and BI tools.',
       hero_location: 'Depok, Indonesia',
-      hero_status: 'Open for Data & BI Roles',
+      hero_status: 'Seeking Data/BI Internship • Available from [ISI BULAN/TAHUN] • [ISI DURASI] • [ISI LOKASI/REMOTE]',
       hero_cta_projects: 'View My Projects',
       hero_cta_cv: 'Download CV',
+      hero_preview_cv: 'Preview CV',
       hero_univ_badge: 'Information Systems @ UPNVJ',
       hero_gpa_badge: 'GPA 3.84',
       hero_rotating_badge: 'DATA ANALYSIS • BUSINESS INTELLIGENCE •',
@@ -44,7 +46,7 @@
       marquee_supply: 'Supply Chain',
       marquee_etl: 'ETL & Dashboarding',
       
-      // About
+      // About (01)
       about_tag: '01 • About Vicky',
       about_heading: 'Translating complex operational workflows into <span class="text-amber-brand italic">actionable</span> intelligence.',
       about_bio: 'As an Information Systems undergraduate at Universitas Pembangunan Nasional "Veteran" Jakarta, I combine data analytical rigor with end-to-end business process modeling. My core focus lies in extracting raw records from databases, conducting meticulous ETL pipelines, and synthesizing them into intuitive executive dashboards.',
@@ -66,7 +68,7 @@
       
       kpi3_title: 'System Delivery',
       kpi3_score: '2',
-      kpi3_label: 'Major Enterprise Projects',
+      kpi3_label: 'Academic Projects',
       kpi3_desc: 'Full lifecycle BI deployment and end-to-end Odoo 17 ERP manufacturing implementation.',
       
       kpi4_title: 'Competition',
@@ -74,20 +76,21 @@
       kpi4_label: 'Gandeng Business Case 2026',
       kpi4_desc: 'National competition in collaboration with Bank Central Asia (BCA).',
       
-      // Projects
+      // Projects (02)
       projects_tag: '02 • Featured Case Studies',
       projects_heading: 'High-Impact <span class="italic text-amber-brand">Data & Systems</span> Projects',
       projects_sub: 'Proven implementations combining statistical computing, interactive BI frontends, and enterprise ERP orchestration.',
       
       proj1_badge: 'BI Dashboard',
+      proj1_badge_group: 'Group Project • 4 Members',
       proj1_date: 'Mar – Apr 2026',
       proj1_kpi_title: 'MBG Operations KPI',
       proj1_tag_live: 'Live Streamlit',
       proj1_stat1_label: 'Records',
-      proj1_stat2_label: 'Efficiency',
-      proj1_stat3_label: 'Districts',
+      proj1_stat2_label: '[ISI: Label Metrik 94.8%]',
+      proj1_stat3_label: 'Provinces',
       proj1_title: 'Business Intelligence Dashboard – Nutritious Meal Program (MBG)',
-      proj1_desc: 'Interactive BI dashboard turning 5,000+ operational records into KPI insights; engineered data cleaning and ETL pipelines, and built geographic allocation heatmaps with high-frequency drill-down filters.',
+      proj1_desc: 'Interactive BI dashboard turning 5,000+ operational records across 38 provinces into KPI insights; engineered data cleaning and ETL pipelines, and built geographic allocation heatmaps with high-frequency drill-down filters.',
       proj1_cta: 'View Case Study',
       proj_cta: 'View Case Study',
       
@@ -100,18 +103,21 @@
       proj2_stage3: 'Sales O2C',
       proj2_title: 'ERP Supply Chain Implementation – B2RP Collection',
       proj2_desc: 'Simulated end-to-end supply chain and manufacturing in Odoo 17; redesigned P2P, O2C, and production workflows using rigorous BPMN models; unified procurement, inventory, manufacturing, and accounting modules.',
+      proj2_stat1_label: 'Core Modules',
+      proj2_stat2_label: 'BOM Validation',
+      proj2_stat3_label: 'Business UAT',
       proj2_cta: 'View Case Study',
       
-      // Achievement
-      achieve_tag: '🏆 Distinction Award',
+      // Achievement (03)
+      achieve_tag: '03 • Semifinalist Distinction',
       achieve_title: 'Semifinalist – Gandeng Business Case Competition 2026',
       achieve_collab: 'Gandeng Competition × PT Bank Central Asia (BCA) • Apr – May 2026',
       achieve_desc: 'Conducted granular market research, quantitative consumer behavior analysis, and growth modeling. Formulated an omnichannel marketing acquisition strategy backed by a realistic 12-month financial and execution roadmap.',
-      achieve_badge_top: 'Top Tier',
+      achieve_badge_top: 'Semifinalist',
       achieve_badge_sub: 'National Semifinalist',
       achieve_badge_eval: 'Evaluated on strategic feasibility, analytical data depth, and financial modeling.',
       
-      // Experience
+      // Experience (04)
       exp_tag: '04 • Organizational Timeline',
       exp_heading: 'Leadership & <span class="italic text-amber-brand">Organizational</span> Impact',
       
@@ -130,18 +136,26 @@
       exp3_date: 'Jul – Sep 2025',
       exp3_desc: 'Orchestrated resource logistics, vendor asset scheduling, and spatial staging for dozens of university organizations, guaranteeing seamless event execution and inventory tracking.',
       
-      // Skills
+      // Skills (05)
       skills_tag: '05 • Competency Toolkit',
       skills_heading: 'Technical & <span class="italic text-amber-brand">Analytical</span> Capabilities',
       skills_sub: 'A balanced synergy of technical scripting, database queries, enterprise process modeling, and cross-functional leadership.',
       
       skill_group1_title: 'Technical Stack',
+      skill_core_badge: 'Core & Hands-on',
+      skill_learning_badge: 'Learning / In Progress',
       skill_group2_title: 'Business & Process',
-      skill_group3_title: 'Soft Skills',
-      skill_soft1: 'Problem Solving',
-      skill_soft2: 'Leadership',
-      skill_soft3: 'Strategic Comms',
-      skill_soft4: 'Critical Thinking',
+      skill_group3_title: 'Demonstrated Soft Skills',
+      
+      skill_soft1_title: 'Cross-Functional Team Leadership',
+      skill_soft1_desc: 'Led a 4-member independent election supervisory team auditing campus-wide democratic voting transparency.',
+      skill_soft2_title: 'Operational Coordination & Logistics',
+      skill_soft2_desc: 'Orchestrated asset staging, resource allocations, and vendor logistics for dozens of student organizations at UKM EXPO.',
+      skill_soft3_title: 'Stakeholder Engagement & Mentorship',
+      skill_soft3_desc: 'Coordinated student empowerment programs, academic tutoring, and faculty feedback forums within HIMA SI.',
+      skill_soft4_title: 'Analytical Problem Solving & Strategy',
+      skill_soft4_desc: 'Synthesized market research and quantitative consumer models into a 12-month execution roadmap (National Semifinalist).',
+      
       skill_group4_title: 'Languages',
       lang_id_name: 'Indonesian',
       lang_id_lvl: 'Native',
@@ -155,35 +169,73 @@
       footer_credits: 'Designed with "The Friendly Analyst" System • Urbanist & Tailwind',
       footer_copyright: '© 2026 Vicky Juni Hendri. All rights reserved. Depok, Indonesia.',
       
-      // Modals
+      // Common Modal Terms
       modal_close: 'Close',
-      modal_overview: 'Project Overview',
-      modal_key_metrics: 'Key Results & Metrics',
+      modal_overview: 'Overview',
+      modal_problem: 'Problem Statement',
+      modal_data_method: 'Data & Methodology',
+      modal_my_role: 'My Role & Contributions',
+      modal_key_insights: 'Key Insights',
       modal_technologies: 'Technologies Used',
+      modal_gallery: 'Project Gallery (Click to enlarge)',
+      modal_links: 'Links & Live Demonstrations',
       
       // MBG Modal
       mbg_modal_title: 'Nutritious Meal Program (MBG) – BI Dashboard',
       mbg_modal_role: 'Data & BI Analyst • Streamlit & Python',
-      mbg_modal_p1: 'Developed an interactive Business Intelligence solution to monitor and analyze operational distribution of nutritious meals across dozens of regions. With over 5,000+ transactional records ingested, the platform eliminates reporting bottlenecks.',
-      mbg_modal_f1: 'Custom ETL pipeline built with Python & Pandas automating messy CSV/SQL exports.',
-      mbg_modal_f2: 'Dynamic choropleth heatmaps created with Plotly to visualize regional delivery density.',
-      mbg_modal_f3: 'Drill-down filters by district, distribution date, and vendor efficiency.',
+      mbg_modal_badge_group: 'Group Project • 4 Members',
+      mbg_overview_text: 'Interactive Business Intelligence solution developed to monitor and analyze the operational distribution of nutritious meals across 38 provinces in Indonesia. Built collaboratively to eliminate reporting bottlenecks and provide actionable geospatial insights.',
+      mbg_problem_text: 'Monitoring meal distribution across 38 geographically fragmented provinces presented significant challenges in detecting localized distribution bottlenecks, regional cost variances, and operational anomalies from thousands of raw operational logs.',
+      mbg_data_source_label: 'Data Source',
+      mbg_data_source_val: 'Public Dataset',
+      mbg_data_scope_label: 'Regional Scope',
+      mbg_data_scope_val: '38 Provinces (National Scale)',
+      mbg_data_records_label: 'Volume',
+      mbg_data_records_val: '5,000+ Cleaned Records',
+      mbg_anomaly_def_label: 'Anomaly Definition',
+      mbg_anomaly_def_val: 'An extreme deviation or irregularity departing from normal distribution standards or baseline trends, specifically statistical outliers exceeding the majority of regional records.',
+      mbg_cost_method_label: 'Daily Cost Estimation Formula',
+      mbg_cost_method_val: 'Calculated by dividing total operational expenditures within a designated period by the exact count of working or calendar days within that respective timeframe.',
+      mbg_role_item1: 'Engineered Anomaly Ratio by Province: Analyzed and mapped the percentage of regencies/cities exhibiting anomalous distribution patterns across each province.',
+      mbg_role_item2: 'Built Catering Distribution Density by Province: Contrasted catering distribution facility density against daily estimated catering expenditures across 38 provinces.',
+      mbg_insight1_title: 'Insight 1: Regional Anomaly Ratio & Special Logistics Readiness',
+      mbg_insight1_text: 'Provinces at the peak of the chart (e.g. North Kalimantan and Bengkulu) indicate critical reporting gaps where active medical needs are registered but actual beneficiaries remain at zero. High anomaly ratios highlight acute unreadiness in specialized regional logistics, presenting compliance audit risks regarding unmet nutritional rights for students with special needs.',
+      mbg_insight2_title: 'Insight 2: Distribution Density vs Daily Catering Cost Disparity',
+      mbg_insight2_text: 'The disparity between beneficiary density trends (average recipients per school) and daily budget bars measures logistic efficiency. Remote provinces with high expenditure but low density demonstrate elevated distribution costs, whereas high-density regions (such as Central and East Java) exhibit high logistical economies of scale.',
       mbg_stat1: '5,000+ Records Cleaned',
-      mbg_stat2: '94.8% Delivery Accuracy',
-      mbg_stat3: '38 District Coverage',
-      mbg_modal_live_btn: 'Open Live Streamlit App',
+      mbg_stat2: '94.8% [ISI: Label Metrik]',
+      mbg_stat3: '38 Provinces',
+      mbg_chart1_caption: 'Chart 1: Anomaly Ratio by Province',
+      mbg_chart2_caption: 'Chart 2: Catering Distribution Density vs Daily Cost',
+      mbg_hosting_notice: 'The live app may take a few seconds to wake up (free hosting).',
+      mbg_view_screenshots_btn: 'View Screenshots',
+      mbg_modal_live_btn: 'Open Live Streamlit App ↗',
+      mbg_source_code_btn: 'Source Code ↗',
       mbg_live_demo: 'Live Streamlit App ↗',
       
       // ERP Modal
       erp_modal_title: 'ERP Supply Chain Implementation – B2RP Collection',
       erp_modal_role: 'ERP Specialist & Business Process Analyst • Odoo 17',
-      erp_modal_p1: 'Architected and simulated the complete enterprise supply chain for retail apparel brand B2RP Collection using Odoo 17 Enterprise. Redesigned standard operations into optimized BPMN 2.0 workflows.',
-      erp_modal_f1: 'Unified Procure-to-Pay (P2P) and Order-to-Cash (O2C) flows with multi-level approvals.',
-      erp_modal_f2: 'Automated Bill of Materials (BOM) calculation and real-time inventory reordering rules.',
-      erp_modal_f3: 'Seamless synchronization between inventory movements and PostgreSQL database ledger.',
+      erp_problem_title: 'Problem Statement',
+      erp_problem_text: 'Retail apparel brand B2RP Collection struggled with fragmented operational silos between manual purchasing, decentralized stock counts, and disjointed sales orders, causing fulfillment delays and inventory inaccuracies.',
+      erp_my_role_title: 'My Role & Execution',
+      erp_my_role_text: 'Designed end-to-end supply chain processes in Odoo 17 Enterprise; structured and aligned Procure-to-Pay (P2P), Order-to-Cash (O2C), and production workflows using BPMN 2.0; and configured PostgreSQL database synchronization.',
+      erp_result_title: 'Key Results & Verification',
       erp_stat1: '4 Core Modules Integrated',
-      erp_stat2: '100% Traceability across BOM',
-      erp_stat3: 'BPMN 2.0 Compliant',
+      erp_stat2: 'Accurate BOM Validation',
+      erp_stat3: 'Business Flow UAT Passed',
+      erp_f1: 'Unified Procure-to-Pay (P2P) and Order-to-Cash (O2C) flows with multi-level approvals.',
+      erp_f2: 'Configured automated Bill of Materials (BOM) and dynamic reordering rules.',
+      erp_f3: 'Synchronized inventory movements with relational database ledger.',
+      erp_gallery_title: 'Process & System Architecture (Click to enlarge)',
+      erp_dashboard_title: 'Odoo 17 Enterprise Dashboard',
+      erp_dashboard_caption: 'Odoo 17 Enterprise Live Operational Dashboard',
+      modal_click_zoom: 'Click to enlarge ↗',
+      erp_bpmn_caption: 'BPMN 2.0 Workflow Model',
+      erp_p2s_caption: 'To-Be Produce-to-Stock (P2S) Workflow',
+      erp_o2c_caption: 'To-Be Order-to-Cash (O2C) Workflow',
+      erp_p2p_caption: 'To-Be Procure-to-Pay (P2P) Workflow',
+      erp_odoo_caption: 'Odoo 17 Enterprise Operations',
       
       // CV Modal
       cv_modal_title: 'Curriculum Vitae – Vicky Juni Hendri',
@@ -205,6 +257,7 @@
       nav_achievement: 'Prestasi',
       nav_experience: 'Pengalaman',
       nav_skills: 'Keahlian',
+      nav_cv: 'CV',
       nav_contact: 'Hubungi Saya',
       
       // Hero
@@ -212,9 +265,10 @@
       hero_headline: 'Saya <span class="italic text-amber-brand underline decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Mahasiswa Sistem Informasi Berfokus pada Data & BI.',
       hero_bio: 'Mahasiswa S1 Sistem Informasi dengan pengalaman langsung dalam analisis data, Business Intelligence, dan analisis proses bisnis. Saya mentransformasikan data operasional menjadi dasbor KPI dan wawasan strategis menggunakan Python, SQL, dan tools BI.',
       hero_location: 'Depok, Indonesia',
-      hero_status: 'Terbuka untuk Peran Data & BI',
+      hero_status: 'Mencari Magang Data/BI • Tersedia mulai [ISI BULAN/TAHUN] • [ISI DURASI] • [ISI LOKASI/REMOTE]',
       hero_cta_projects: 'Lihat Proyek Saya',
       hero_cta_cv: 'Unduh CV',
+      hero_preview_cv: 'Pratinjau CV',
       hero_univ_badge: 'Sistem Informasi @ UPNVJ',
       hero_gpa_badge: 'IPK 3.84',
       hero_rotating_badge: 'ANALISIS DATA • BUSINESS INTELLIGENCE •',
@@ -229,7 +283,7 @@
       marquee_supply: 'Manajemen Rantai Pasok',
       marquee_etl: 'ETL & Dasbor',
       
-      // About
+      // About (01)
       about_tag: '01 • Tentang Vicky',
       about_heading: 'Menerjemahkan alur operasional kompleks menjadi kecerdasan yang <span class="text-amber-brand italic">dapat ditindaklanjuti</span>.',
       about_bio: 'Sebagai mahasiswa S1 Sistem Informasi di Universitas Pembangunan Nasional "Veteran" Jakarta, saya memadukan ketajaman analisis data dengan pemodelan proses bisnis terintegrasi. Fokus utama saya adalah mengekstraksi data mentah dari basis data, menjalankan alur ETL terstruktur, dan merangkumnya menjadi dasbor eksekutif yang intuitif.',
@@ -251,28 +305,29 @@
       
       kpi3_title: 'Implementasi Sistem',
       kpi3_score: '2',
-      kpi3_label: 'Proyek Besar Terlaksana',
+      kpi3_label: 'Proyek Akademik',
       kpi3_desc: 'Deployment siklus penuh BI dan implementasi manufaktur ERP Odoo 17 secara menyeluruh.',
       
       kpi4_title: 'Kompetisi',
-      kpi4_score: 'Semifinalis',
+      kpi4_score: 'Semifinalist',
       kpi4_label: 'Gandeng Business Case 2026',
       kpi4_desc: 'Kompetisi tingkat nasional yang berkolaborasi dengan Bank Central Asia (BCA).',
       
-      // Projects
+      // Projects (02)
       projects_tag: '02 • Studi Kasus Unggulan',
       projects_heading: 'Proyek <span class="italic text-amber-brand">Data & Sistem</span> Berdampak Tinggi',
       projects_sub: 'Implementasi nyata yang menggabungkan komputasi statistik, antarmuka BI interaktif, dan orkestrasi ERP perusahaan.',
       
       proj1_badge: 'Dasbor BI',
+      proj1_badge_group: 'Proyek Kelompok • 4 Anggota',
       proj1_date: 'Mar – Apr 2026',
       proj1_kpi_title: 'KPI Operasional MBG',
       proj1_tag_live: 'Live Streamlit',
       proj1_stat1_label: 'Catatan',
-      proj1_stat2_label: 'Efisiensi',
-      proj1_stat3_label: 'Wilayah',
+      proj1_stat2_label: '[ISI: Label Metrik 94.8%]',
+      proj1_stat3_label: 'Provinsi',
       proj1_title: 'Dasbor Business Intelligence – Program Makanan Bergizi (MBG)',
-      proj1_desc: 'Dasbor BI interaktif yang mengubah 5.000+ catatan operasional menjadi wawasan KPI; merancang alur pembersihan dan ETL data, serta membangun heatmap alokasi geografis dengan filter drill-down.',
+      proj1_desc: 'Dasbor BI interaktif yang mengubah 5.000+ catatan operasional di 38 provinsi menjadi wawasan KPI; merancang alur pembersihan dan ETL data, serta membangun heatmap alokasi geografis dengan filter drill-down.',
       proj1_cta: 'Lihat Studi Kasus',
       proj_cta: 'Lihat Studi Kasus',
       
@@ -285,18 +340,21 @@
       proj2_stage3: 'Penjualan O2C',
       proj2_title: 'Implementasi Supply Chain ERP – B2RP Collection',
       proj2_desc: 'Simulasi rantai pasok dan manufaktur menyeluruh pada Odoo 17; merancang ulang alur kerja P2P, O2C, dan produksi dengan model BPMN; mengintegrasikan modul pengadaan, inventaris, manufaktur, dan akuntansi.',
+      proj2_stat1_label: 'Modul Inti',
+      proj2_stat2_label: 'Validasi BOM',
+      proj2_stat3_label: 'UAT Alur Bisnis',
       proj2_cta: 'Lihat Studi Kasus',
       
-      // Achievement
-      achieve_tag: '🏆 Penghargaan Prestasi',
-      achieve_title: 'Semifinalis – Gandeng Business Case Competition 2026',
+      // Achievement (03)
+      achieve_tag: '03 • Prestasi Kompetisi',
+      achieve_title: 'Semifinalist – Gandeng Business Case Competition 2026',
       achieve_collab: 'Gandeng Competition × PT Bank Central Asia (BCA) • Apr – Mei 2026',
       achieve_desc: 'Melakukan riset pasar mendalam, analisis kuantitatif perilaku konsumen, dan pemodelan pertumbuhan. Merumuskan strategi akuisisi pemasaran omnichannel dengan peta jalan keuangan dan eksekusi 12 bulan yang realistis.',
-      achieve_badge_top: 'Tingkat Teratas',
-      achieve_badge_sub: 'Semifinalis Nasional',
+      achieve_badge_top: 'Semifinalist',
+      achieve_badge_sub: 'National Semifinalist',
       achieve_badge_eval: 'Dinilai berdasarkan kelayakan strategis, kedalaman analisis data, dan pemodelan keuangan.',
       
-      // Experience
+      // Experience (04)
       exp_tag: '04 • Linimasa Organisasi',
       exp_heading: 'Kepemimpinan & Dampak <span class="italic text-amber-brand">Organisasi</span>',
       
@@ -315,18 +373,26 @@
       exp3_date: 'Jul – Sep 2025',
       exp3_desc: 'Mengatur logistik sarana prasarana, penjadwalan aset vendor, serta tata letak panggung untuk puluhan organisasi mahasiswa, menjamin kelancaran jalannya acara dan pelacakan inventaris yang rapi.',
       
-      // Skills
+      // Skills (05)
       skills_tag: '05 • Toolkit Kompetensi',
       skills_heading: 'Kemampuan Teknis & <span class="italic text-amber-brand">Analitis</span>',
       skills_sub: 'Sinergi berimbang antara penulisan kode teknis, kueri basis data, pemodelan proses bisnis, dan kepemimpinan tim.',
       
       skill_group1_title: 'Keahlian Teknis',
+      skill_core_badge: 'Keahlian Utama (Core)',
+      skill_learning_badge: 'Sedang Dipelajari (In Progress)',
       skill_group2_title: 'Bisnis & Proses',
-      skill_group3_title: 'Keterampilan Interpersonal',
-      skill_soft1: 'Pemecahan Masalah',
-      skill_soft2: 'Kepemimpinan',
-      skill_soft3: 'Komunikasi Strategis',
-      skill_soft4: 'Berpikir Kritis',
+      skill_group3_title: 'Keterampilan Interpersonal Terbukti',
+      
+      skill_soft1_title: 'Kepemimpinan Tim Lintas Fungsi',
+      skill_soft1_desc: 'Memimpin tim pengawas independen beranggotakan 4 orang dalam mengawal transparansi voting pemilihan raya mahasiswa.',
+      skill_soft2_title: 'Koordinasi Operasional & Logistik',
+      skill_soft2_desc: 'Mengorkestrasi tata letak fasilitas, alokasi aset, dan jadwal vendor untuk puluhan organisasi pada perhelatan UKM EXPO.',
+      skill_soft3_title: 'Kolaborasi Pemangku Kepentingan',
+      skill_soft3_desc: 'Mengoordinasikan program penguatan akademik, mentoring mahasiswa, dan forum aspirasi berbasis data dengan pihak fakultas di HIMA SI.',
+      skill_soft4_title: 'Analisis Masalah & Strategi',
+      skill_soft4_desc: 'Merumuskan riset pasar kuantitatif dan model perilaku konsumen menjadi roadmap eksekusi 12 bulan (Semifinalist Nasional).',
+      
       skill_group4_title: 'Bahasa',
       lang_id_name: 'Bahasa Indonesia',
       lang_id_lvl: 'Penutur Asli (Native)',
@@ -340,35 +406,73 @@
       footer_credits: 'Dirancang dengan Sistem "The Friendly Analyst" • Urbanist & Tailwind',
       footer_copyright: '© 2026 Vicky Juni Hendri. Hak cipta dilindungi. Depok, Indonesia.',
       
-      // Modals
+      // Common Modal Terms
       modal_close: 'Tutup',
       modal_overview: 'Ikhtisar Proyek',
-      modal_key_metrics: 'Hasil & Metrik Utama',
+      modal_problem: 'Rumusan Masalah',
+      modal_data_method: 'Data & Metodologi',
+      modal_my_role: 'Peran & Kontribusi Saya',
+      modal_key_insights: 'Insight Utama',
       modal_technologies: 'Teknologi yang Digunakan',
+      modal_gallery: 'Galeri Proyek (Klik untuk memperbesar)',
+      modal_links: 'Tautan & Demonstrasi Langsung',
       
       // MBG Modal
       mbg_modal_title: 'Program Makanan Bergizi (MBG) – Dasbor BI',
       mbg_modal_role: 'Analis Data & BI • Streamlit & Python',
-      mbg_modal_p1: 'Mengembangkan solusi Business Intelligence interaktif untuk memonitor dan menganalisis distribusi operasional makanan bergizi di puluhan wilayah. Mengolah lebih dari 5.000+ data transaksi guna mengatasi kendala pelaporan konvensional.',
-      mbg_modal_f1: 'Pipeline ETL kustom dengan Python & Pandas yang mengotomatisasi ekspor CSV/SQL mentah.',
-      mbg_modal_f2: 'Peta choropleth heatmap dinamis menggunakan Plotly untuk memetakan kepadatan distribusi wilayah.',
-      mbg_modal_f3: 'Filter drill-down mendalam berdasarkan kabupaten, tanggal pengiriman, dan efisiensi vendor.',
+      mbg_modal_badge_group: 'Proyek Kelompok • 4 Anggota',
+      mbg_overview_text: 'Solusi Business Intelligence interaktif yang dikembangkan untuk memonitor dan menganalisis distribusi operasional makanan bergizi di 38 provinsi di Indonesia. Dibangun secara kolaboratif guna mengatasi kendala pelaporan konvensional dan menyajikan visualisasi geospasial yang actionable.',
+      mbg_problem_text: 'Pemantauan distribusi pangan di 38 provinsi yang terfragmentasi menghadapi kendala dalam mendeteksi ketimpangan alokasi daerah, disparitas estimasi biaya, dan anomali operasional dari ribuan baris data mentah.',
+      mbg_data_source_label: 'Sumber Data',
+      mbg_data_source_val: 'Dataset Publik',
+      mbg_data_scope_label: 'Cakupan Wilayah',
+      mbg_data_scope_val: '38 Provinsi (Skala Nasional)',
+      mbg_data_records_label: 'Volume Data',
+      mbg_data_records_val: '5.000+ Catatan Operasional',
+      mbg_anomaly_def_label: 'Definisi Anomali',
+      mbg_anomaly_def_val: 'Penyimpangan atau ketidakteraturan ekstrem dari suatu pola normal, standar, atau tren umum dalam kumpulan data, seperti kemunculan nilai pencilan (outlier) yang jauh melampaui kelompok data mayoritas.',
+      mbg_cost_method_label: 'Metode Estimasi Biaya Harian',
+      mbg_cost_method_val: 'Dihitung dengan membagi total biaya operasional atau pengeluaran dalam satu periode waktu dengan jumlah hari kerja atau hari kalender pada periode tersebut.',
+      mbg_role_item1: 'Merancang Rasio Anomali per Provinsi: Mengkalkulasi dan memetakan persentase kabupaten/kota dengan kondisi anomali di setiap provinsi menggunakan visualisasi geospasial.',
+      mbg_role_item2: 'Mengembangkan Kepadatan Distribusi Katering per Provinsi: Membandingkan rasio kepadatan katering dengan estimasi biaya katering harian di 38 provinsi.',
+      mbg_insight1_title: 'Insight 1: Rasio Anomali & Kesiapan Logistik Khusus',
+      mbg_insight1_text: 'Provinsi di puncak grafik (seperti Kalimantan Utara dan Bengkulu) mengindikasikan kegagalan sistemik pendataan Dapodik dengan persentase kecamatan beranomali tertinggi (kondisi medis aktif namun penerima manfaat = 0). Rasio anomali yang tinggi ini menandakan ketidaksiapan alokasi logistik khusus, yang berisiko menjadi temuan audit BPK terkait hak gizi siswa berkebutuhan khusus yang tidak terpenuhi.',
+      mbg_insight2_title: 'Insight 2: Disparitas Kepadatan Distribusi vs Estimasi Biaya Harian',
+      mbg_insight2_text: 'Disparitas antara garis tren (rata-rata penerima manfaat per sekolah sebagai indikator kepadatan) dan batang anggaran harian mengukur efisiensi logistik. Provinsi dengan anggaran besar namun kepadatan siswa rendah (garis biru di bawah batang hijau) membuktikan tingginya biaya distribusi/ongkos kirim katering di wilayah pelosok, sementara provinsi padat seperti Jawa Tengah dan Jawa Timur mencatat skala ekonomi yang lebih terkonsentrasi.',
       mbg_stat1: '5.000+ Catatan Dibersihkan',
-      mbg_stat2: '94,8% Akurasi Pengiriman',
-      mbg_stat3: '38 Kabupaten Terjangkau',
-      mbg_modal_live_btn: 'Buka Live Streamlit App',
+      mbg_stat2: '94,8% [ISI: Label Metrik]',
+      mbg_stat3: '38 Provinsi',
+      mbg_chart1_caption: 'Grafik 1: Rasio Anomali per Provinsi',
+      mbg_chart2_caption: 'Grafik 2: Kepadatan Distribusi Katering vs Biaya Harian',
+      mbg_hosting_notice: 'Catatan: Aplikasi live mungkin membutuhkan beberapa detik untuk aktif (free hosting).',
+      mbg_view_screenshots_btn: 'Lihat Tangkapan Layar',
+      mbg_modal_live_btn: 'Buka Live Streamlit App ↗',
+      mbg_source_code_btn: 'Kode Sumber ↗',
       mbg_live_demo: 'Live Streamlit App ↗',
       
       // ERP Modal
       erp_modal_title: 'Implementasi Supply Chain ERP – B2RP Collection',
       erp_modal_role: 'Spesialis ERP & Analis Proses Bisnis • Odoo 17',
-      erp_modal_p1: 'Merancang dan menyimulasikan rantai pasok perusahaan secara terpadu untuk merek pakaian retail B2RP Collection menggunakan Odoo 17 Enterprise. Mengoptimalkan alur operasional ke dalam standar BPMN 2.0.',
-      erp_modal_f1: 'Penyatuan alur Procure-to-Pay (P2P) dan Order-to-Cash (O2C) dengan persetujuan bertingkat.',
-      erp_modal_f2: 'Perhitungan otomatis Bill of Materials (BOM) dan aturan restock inventaris secara real-time.',
-      erp_modal_f3: 'Sinkronisasi lancar antara pergerakan stok gudang dengan buku besar database PostgreSQL.',
-      erp_stat1: '4 Modul Utama Terintegrasi',
-      erp_stat2: '100% Keterlacakan pada BOM',
-      erp_stat3: 'Sesuai Standar BPMN 2.0',
+      erp_problem_title: 'Rumusan Masalah',
+      erp_problem_text: 'Merek pakaian retail B2RP Collection menghadapi hambatan operasional akibat fragmentasi sistem antara pengadaan barang manual, inventaris yang tidak tersinkronisasi, dan pengelolaan order penjualan terpisah yang memicu keterlambatan pemenuhan produk.',
+      erp_my_role_title: 'Peran & Eksekusi Saya',
+      erp_my_role_text: 'Merancang alur rantai pasok terintegrasi menggunakan Odoo 17 Enterprise; memodelkan alur Procure-to-Pay (P2P), Order-to-Cash (O2C), dan manufaktur sesuai standar BPMN 2.0; serta mengonfigurasi sinkronisasi basis data PostgreSQL.',
+      erp_result_title: 'Hasil & Bukti Implementasi',
+      erp_stat1: '4 Modul Terintegrasi',
+      erp_stat2: 'Validasi BOM Akurat',
+      erp_stat3: 'UAT Alur Bisnis Lolos',
+      erp_f1: 'Penyatuan alur Procure-to-Pay (P2P) dan Order-to-Cash (O2C) dengan persetujuan bertingkat.',
+      erp_f2: 'Pengaturan otomatis Bill of Materials (BOM) dan aturan restock dinamis.',
+      erp_f3: 'Sinkronisasi pergerakan stok gudang dengan buku besar database relasional.',
+      erp_gallery_title: 'Arsitektur Proses & Sistem (Klik untuk memperbesar)',
+      erp_dashboard_title: 'Dasbor Odoo 17 Enterprise',
+      erp_dashboard_caption: 'Dasbor Operasional Sistem Odoo 17 Enterprise',
+      modal_click_zoom: 'Klik untuk memperbesar ↗',
+      erp_bpmn_caption: 'Model Alur Kerja BPMN 2.0',
+      erp_p2s_caption: 'Alur Kerja To-Be Produce-to-Stock (P2S)',
+      erp_o2c_caption: 'Alur Kerja To-Be Order-to-Cash (O2C)',
+      erp_p2p_caption: 'Alur Kerja To-Be Procure-to-Pay (P2P)',
+      erp_odoo_caption: 'Operasional Sistem Odoo 17 Enterprise',
       
       // CV Modal
       cv_modal_title: 'Curriculum Vitae – Vicky Juni Hendri',
@@ -382,11 +486,16 @@
 
   // Get initial language preference
   function getPreferredLanguage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryLang = urlParams.get('lang');
+    if (queryLang === 'id' || queryLang === 'en') {
+      return queryLang;
+    }
+
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === 'id' || saved === 'en') {
       return saved;
     }
-    // Check browser language
     const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
     if (browserLang.startsWith('id')) {
       return 'id';
@@ -397,7 +506,7 @@
   // Update text of SVG textPath (for circular rotating badge)
   function updateBadgeCircle(lang) {
     const textPath = document.querySelector('#badgeTextPath');
-    if (textPath) {
+    if (textPath && translations[lang]) {
       textPath.textContent = translations[lang].hero_rotating_badge;
     }
   }
