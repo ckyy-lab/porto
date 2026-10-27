@@ -1,0 +1,200 @@
+/**
+ * Vicky Juni Hendri – Data & BI Portfolio
+ * Design System: "The Friendly Analyst"
+ */
+
+:root {
+  --color-forest: #12432E;
+  --color-forest-dark: #0B2F20;
+  --color-forest-light: #1B563D;
+  --color-forest-surface: rgba(18, 67, 46, 0.08);
+  --color-amber: #FFA800;
+  --color-amber-soft: #FFC14D;
+  --color-amber-glow: rgba(255, 168, 0, 0.28);
+  
+  --color-bg: #F8F8F5;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F3F4F0;
+  --color-ink: #111111;
+  --color-slate: #5A5F5C;
+  --color-border: #E5E7EB;
+  --color-card-border: rgba(229, 231, 235, 0.9);
+  
+  --color-nav-bg: #12432E;
+  --color-nav-border: rgba(27, 86, 61, 0.5);
+  --color-nav-text: #FFFFFF;
+  
+  --color-kpi-card: #12432E;
+  --color-kpi-border: #1B563D;
+  --color-kpi-text: #FFFFFF;
+  
+  --shadow-sm: 0 2px 8px rgba(18, 67, 46, 0.06);
+  --shadow-md: 0 8px 24px rgba(18, 67, 46, 0.12);
+  --shadow-lg: 0 16px 36px rgba(18, 67, 46, 0.16);
+  --shadow-nav: 0 8px 30px rgba(18, 67, 46, 0.18);
+  
+  --selection-border: #12432E;
+}
+
+/* Dark Mode Theme Variables */
+html.dark {
+  --color-forest: #164D36;
+  --color-forest-dark: #0A2419;
+  --color-forest-light: #21684B;
+  --color-forest-surface: rgba(33, 104, 75, 0.25);
+  
+  --color-bg: #0C1511;
+  --color-surface: #12211A;
+  --color-surface-subtle: #172B22;
+  --color-ink: #F2F5F3;
+  --color-slate: #9BA9A2;
+  --color-border: #1F3D30;
+  --color-card-border: #1F3D30;
+  
+  --color-nav-bg: #0D2218;
+  --color-nav-border: #1D4A34;
+  --color-nav-text: #F2F5F3;
+  
+  --color-kpi-card: #0F2A1E;
+  --color-kpi-border: #1D4E37;
+  --color-kpi-text: #F2F5F3;
+  
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 26px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.65);
+  --shadow-nav: 0 8px 32px rgba(0, 0, 0, 0.55);
+  
+  --selection-border: #2B6B4D;
+}
+
+/* Smooth Theme Transitions */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B563D;
+  border-radius: 9999px;
+  border: 2px solid var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-amber);
+}
+
+/* Text Selection */
+::selection {
+  background-color: var(--color-amber);
+  color: #111111;
+}
+
+/* Selection Box corner handles */
+.selection-handle {
+  width: 7px;
+  height: 7px;
+  background: var(--color-amber);
+  border: 1px solid var(--selection-border);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Dynamic theme background and surface classes */
+.theme-bg {
+  background-color: var(--color-bg);
+}
+
+.theme-surface {
+  background-color: var(--color-surface);
+}
+
+.theme-surface-subtle {
+  background-color: var(--color-surface-subtle);
+}
+
+.theme-border {
+  border-color: var(--color-border);
+}
+
+.theme-ink {
+  color: var(--color-ink);
+}
+
+.theme-slate {
+  color: var(--color-slate);
+}
+
+/* Active Nav Link Styling */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link.active {
+  color: var(--color-amber);
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-amber);
+  border-radius: 9999px;
+}
+
+/* Focus Outline Accessibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 3px;
+}
+
+/* Language Switcher Switch */
+.lang-btn {
+  transition: all 0.2s ease;
+}
+
+.lang-btn.active {
+  background-color: var(--color-amber);
+  color: #111111;
+  font-weight: 800;
+}
+
+/* Modal Backdrop */
+.modal-overlay {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(18, 67, 46, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html.dark .glass-panel {
+  background: rgba(13, 34, 24, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
