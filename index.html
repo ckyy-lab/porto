@@ -469,7 +469,17 @@
           <!-- Project 1: MBG Dashboard (With Real Screenshots / Graceful Fallback) -->
           <div class="bg-[#F8F8F5] dark:bg-[#15251E] rounded-[24px] border border-gray-200 dark:border-[#1F3D30] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
             <!-- Mockup / Real Screenshot Header -->
-            <div class="h-64 bg-gradient-to-br from-amber-soft/20 via-amber-brand/10 to-forest/10 dark:from-amber-brand/15 dark:to-forest/30 p-5 flex flex-col justify-between relative overflow-hidden border-b border-gray-200 dark:border-[#1F3D30]">
+            <div class="h-64 p-5 flex flex-col justify-between relative overflow-hidden border-b border-gray-200 dark:border-[#1F3D30] bg-[#0E1A14]">
+              <!-- Real Project Cover Background -->
+              <img 
+                src="assets/images/cover-mbg.png" 
+                alt="MBG Streamlit Dashboard Cover Background" 
+                loading="lazy" 
+                class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none z-0"
+              >
+              <!-- Ambient Gradient Overlay for Readability -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/60 dark:from-[#0D2218]/90 dark:via-[#0D2218]/50 dark:to-black/70 backdrop-blur-[0.5px] pointer-events-none z-0"></div>
+
               <div class="flex items-center justify-between relative z-10 gap-2 flex-wrap">
                 <div class="flex items-center gap-2">
                   <span class="bg-forest dark:bg-[#0A2419] text-white text-xs font-bold px-3 py-1.5 rounded-full" data-i18n="proj1_badge">BI Dashboard</span>
@@ -564,9 +574,19 @@
 
           <!-- Project 2: ERP Implementation -->
           <div class="bg-[#F8F8F5] dark:bg-[#15251E] rounded-[24px] border border-gray-200 dark:border-[#1F3D30] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
-            <!-- Mockup Visual Header -->
-            <div class="h-64 bg-gradient-to-br from-forest/15 via-emerald-800/10 to-amber-brand/10 dark:from-forest/30 dark:to-emerald-950/40 p-6 flex flex-col justify-between relative overflow-hidden border-b border-gray-200 dark:border-[#1F3D30]">
-              <div class="flex items-center justify-between relative z-10">
+            <!-- Mockup / Real Screenshot Header -->
+            <div class="h-64 p-5 flex flex-col justify-between relative overflow-hidden border-b border-gray-200 dark:border-[#1F3D30] bg-[#0E1A14]">
+              <!-- Real Project Cover Background -->
+              <img 
+                src="assets/images/cover-erp.png" 
+                alt="ERP Implementation Cover Background" 
+                loading="lazy" 
+                class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none z-0"
+              >
+              <!-- Ambient Gradient Overlay for Readability -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/60 dark:from-[#0D2218]/90 dark:via-[#0D2218]/50 dark:to-black/70 backdrop-blur-[0.5px] pointer-events-none z-0"></div>
+
+              <div class="flex items-center justify-between relative z-10 gap-2 flex-wrap">
                 <span class="bg-forest dark:bg-[#0A2419] text-white text-xs font-bold px-3 py-1.5 rounded-full" data-i18n="proj2_badge">ERP &amp; BPMN</span>
                 <span class="bg-white/90 dark:bg-black/50 text-slate dark:text-white/80 font-bold text-xs px-3 py-1.5 rounded-full shadow-xs" data-i18n="proj2_date">May – Jul 2026</span>
               </div>
@@ -1077,7 +1097,27 @@
               <span data-i18n="modal_gallery">Project Gallery (Click to enlarge)</span>
             </span>
           </h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="space-y-3">
+            <!-- Full Dashboard Overview (Featured) -->
+            <button type="button" data-lightbox-src="assets/images/cover-mbg.png" data-lightbox-caption="Full Streamlit BI Dashboard Overview" class="w-full group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all block">
+              <div class="h-44 sm:h-52 rounded-xl overflow-hidden bg-gray-100 dark:bg-[#112019] relative flex items-center justify-center">
+                <img 
+                  src="assets/images/cover-mbg.png" 
+                  alt="Full Streamlit BI Dashboard Overview" 
+                  loading="lazy"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform"
+                >
+                <div class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors flex items-end p-3">
+                  <span class="text-xs font-bold text-white bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
+                    <svg class="w-3.5 h-3.5 text-amber-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                    Full Dashboard Overview (Click to enlarge)
+                  </span>
+                </div>
+              </div>
+            </button>
+
+            <!-- 2 Sub-charts Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <!-- Screenshot 1 -->
             <button type="button" data-lightbox-src="assets/images/mbg-anomaly.png" data-lightbox-caption="Chart 1: Anomaly Ratio by Province" class="group text-left p-2.5 rounded-2xl bg-[#F8F8F5] dark:bg-[#162920] border border-gray-200/80 dark:border-[#1F3D30] hover:border-amber-brand transition-all">
               <div class="h-36 rounded-xl overflow-hidden bg-gray-100 dark:bg-[#112019] relative flex items-center justify-center">
@@ -1113,6 +1153,7 @@
               </div>
               <span class="text-xs font-bold text-forest dark:text-amber-brand block mt-2" data-i18n="mbg_chart2_caption">Chart 2: Catering Distribution Density vs Daily Cost</span>
             </button>
+            </div>
           </div>
         </div>
 
