@@ -19,12 +19,13 @@
       nav_projects: 'Projects',
       nav_achievement: 'Achievement',
       nav_experience: 'Experience',
+      nav_certificates: 'Certificates',
       nav_skills: 'Skills',
       nav_cv: 'CV',
       nav_contact: 'Contact Me',
       
       // Hero
-      hero_badge: 'Hello There! 👋',
+      hero_badge: 'Hello There!',
       hero_headline: 'I\'m <span class="italic text-amber-brand underline decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Information Systems Student Focused on Data & BI.',
       hero_bio: 'Information Systems undergraduate with hands-on experience in data analysis, Business Intelligence, and process analysis. I turn operational data into KPI dashboards and insights using Python, SQL, and BI tools.',
       hero_location: 'Depok, Indonesia',
@@ -136,8 +137,13 @@
       exp3_date: 'Jul – Sep 2025',
       exp3_desc: 'Orchestrated resource logistics, vendor asset scheduling, and spatial staging for dozens of university organizations, guaranteeing seamless event execution and inventory tracking.',
       
-      // Skills (05)
-      skills_tag: '05 • Competency Toolkit',
+      // Certificates (05)
+      certificates_tag: '05 • Credentials',
+      certificates_heading: 'Certificates',
+      certificates_sub: 'Short courses and credentials in data and AI fundamentals.',
+      
+      // Skills (06)
+      skills_tag: '06 • Competency Toolkit',
       skills_heading: 'Technical & <span class="italic text-amber-brand">Analytical</span> Capabilities',
       skills_sub: 'A balanced synergy of technical scripting, database queries, enterprise process modeling, and cross-functional leadership.',
       
@@ -256,12 +262,13 @@
       nav_projects: 'Proyek',
       nav_achievement: 'Prestasi',
       nav_experience: 'Pengalaman',
+      nav_certificates: 'Sertifikat',
       nav_skills: 'Keahlian',
       nav_cv: 'CV',
       nav_contact: 'Hubungi Saya',
       
       // Hero
-      hero_badge: 'Halo Semuanya! 👋',
+      hero_badge: 'Halo Semuanya!',
       hero_headline: 'Saya <span class="italic text-amber-brand underline decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Mahasiswa Sistem Informasi Berfokus pada Data & BI.',
       hero_bio: 'Mahasiswa S1 Sistem Informasi dengan pengalaman langsung dalam analisis data, Business Intelligence, dan analisis proses bisnis. Saya mentransformasikan data operasional menjadi dasbor KPI dan wawasan strategis menggunakan Python, SQL, dan tools BI.',
       hero_location: 'Depok, Indonesia',
@@ -373,8 +380,13 @@
       exp3_date: 'Jul – Sep 2025',
       exp3_desc: 'Mengatur logistik sarana prasarana, penjadwalan aset vendor, serta tata letak panggung untuk puluhan organisasi mahasiswa, menjamin kelancaran jalannya acara dan pelacakan inventaris yang rapi.',
       
-      // Skills (05)
-      skills_tag: '05 • Toolkit Kompetensi',
+      // Certificates (05)
+      certificates_tag: '05 • Kredensial',
+      certificates_heading: 'Sertifikat',
+      certificates_sub: 'Kursus singkat dan kredensial dalam dasar-dasar data dan AI.',
+      
+      // Skills (06)
+      skills_tag: '06 • Toolkit Kompetensi',
       skills_heading: 'Kemampuan Teknis & <span class="italic text-amber-brand">Analitis</span>',
       skills_sub: 'Sinergi berimbang antara penulisan kode teknis, kueri basis data, pemodelan proses bisnis, dan kepemimpinan tim.',
       

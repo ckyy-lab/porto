@@ -221,3 +221,11 @@ html.dark .screenshot-placeholder {
   background: linear-gradient(135deg, rgba(18, 67, 46, 0.25), rgba(255, 168, 0, 0.12));
   border: 1.5px dashed rgba(255, 168, 0, 0.35);
 }
+
+/* Multi-line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
   modals.forEach((modal) => {
     // Close on clicking backdrop
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
+      if (e.target === modal || e.target.classList.contains('modal-backdrop-clickable')) {
         closeModal(modal);
       }
     });
@@ -223,9 +223,27 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const src = trigger.getAttribute('data-lightbox-src');
       const caption = trigger.getAttribute('data-lightbox-caption') || '';
+      lightboxImg.onerror = function () {
+        if (!this.dataset.tried) {
+          this.dataset.tried = '1';
+          this.src = 'assets/images/certificates/' + src.split('/').pop();
+        }
+      };
+      lightboxImg.removeAttribute('data-tried');
       lightboxImg.src = src;
       if (lightboxCaption) lightboxCaption.textContent = caption;
       openModal('modal-lightbox', trigger);
+    }
+  });
+
+  // Open lightbox on Enter or Space key press if focused on trigger
+  document.addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+      const trigger = e.target.closest('[data-lightbox-src]');
+      if (trigger) {
+        e.preventDefault();
+        trigger.click();
+      }
     }
   });
 

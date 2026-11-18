@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Getting Started with Data",
+    "issuer": "IBM SkillsBuild",
+    "issued": "Jul 22, 2026",
+    "verifyUrl": "https://www.credly.com/badges/bdfafea2-83ac-4ade-8fbc-e3ac549908e1",
+    "credentialId": null,
+    "description": "Data processing principles, identifying data pipelines, and applying data analysis logic to support business decisions.",
+    "tags": ["Data pipeline", "Data analysis"],
+    "image": "/certificates/getting-started-with-data.png"
+  },
+  {
+    "title": "Classifying Data Using IBM Granite",
+    "issuer": "IBM SkillsBuild",
+    "issued": "Jul 22, 2026",
+    "verifyUrl": null,
+    "credentialId": "ALM-COURSE_4058910",
+    "description": "Classifying data with the IBM Granite AI model and the basics of applying large language models to data analysis and governance.",
+    "tags": ["LLM", "Data classification"],
+    "image": "/certificates/classifying-data-ibm-granite.png"
+  },
+  {
+    "title": "Unleashing the Power of AI Agents",
+    "issuer": "IBM SkillsBuild",
+    "issued": "Jul 25, 2026",
+    "verifyUrl": null,
+    "credentialId": "ALM-COURSE_3825456",
+    "description": "Fundamentals of AI autonomous agents and their architecture for automating workflows, and applying LLMs to business tasks.",
+    "tags": ["AI agents", "LLM"],
+    "image": "/certificates/ai-agents.png"
+  },
+  {
+    "title": "Belajar Dasar AI",
+    "issuer": "Dicoding Indonesia",
+    "issued": "Jun 15, 2026",
+    "validUntil": "Jun 15, 2029",
+    "verifyUrl": "https://dicoding.com/certificates/ERZRLV4VMZYV",
+    "credentialId": "ERZRLV4VMZYV",
+    "description": "Foundations of artificial intelligence, machine learning, and generative AI, and how AI solutions are applied to technical problems.",
+    "tags": ["AI", "Machine learning", "Generative AI"],
+    "image": "/certificates/belajar-dasar-ai.png"
+  }
+]
