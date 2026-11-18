@@ -29,7 +29,6 @@
       hero_headline: 'I\'m <span class="italic text-amber-brand underline decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Information Systems Student Focused on Data & BI.',
       hero_bio: 'Information Systems undergraduate with hands-on experience in data analysis, Business Intelligence, and process analysis. I turn operational data into KPI dashboards and insights using Python, SQL, and BI tools.',
       hero_location: 'Depok, Indonesia',
-      hero_status: 'Seeking Data/BI Internship • Available from [ISI BULAN/TAHUN] • [ISI DURASI] • [ISI LOKASI/REMOTE]',
       hero_cta_projects: 'View My Projects',
       hero_cta_cv: 'Download CV',
       hero_preview_cv: 'Preview CV',
@@ -127,6 +126,28 @@
       exp1_date: 'Jan 2026 – Present',
       exp1_desc: 'Spearheading student engagement and academic empowerment initiatives for Information Systems cohorts, facilitating academic mentorship, and coordinating data-backed faculty feedback sessions.',
       
+      exp_gemas_role: 'Head of Consumption Management Division, GEMAS (Community Service Program)',
+      exp_gemas_org: 'HIMA S1 Sistem Informasi UPNVJ',
+      exp_gemas_date: 'Sep 2026 – Nov 2026',
+      exp_gemas_desc: 'Led and coordinated a 4-member team managing meals for 40 people over 5 days of activities. Coordinated menu planning, food procurement, and the cooking and distribution of meals. Worked with team members, the Project Officer (PO), and the Vice Project Officer (VPO) to reduce the meal budget from Rp3 million to Rp2.5 million (16.7% savings) while meeting all meal needs.',
+      exp_gemas_skills: [
+        'Google Sheets',
+        'Leadership & Team Coordination',
+        'Operational Planning',
+        'Budgeting & Cost Control'
+      ],
+
+      exp_visit_role: 'Head of Facilities and Infrastructure Division, Joint Study Visit HIMSI UPNVJ × HIMATIK PNJ',
+      exp_visit_org: 'HIMA S1 Sistem Informasi UPNVJ',
+      exp_visit_date: 'Jul 2026 – Aug 2026',
+      exp_visit_desc: 'Led a 3-member division in planning and managing event equipment needs, from procurement to distribution. Prepared the budget and carried out an equipment inventory to ensure all event needs were met on time. Coordinated with the internal committee and HIMATIK PNJ to fulfill logistics needs and handle changing operational requirements.',
+      exp_visit_skills: [
+        'Leadership & Team Coordination',
+        'Operational Planning',
+        'Budgeting & Inventory Management',
+        'Stakeholder Coordination'
+      ],
+      
       exp2_role: 'Head of Supervisory Division',
       exp2_org: 'Pemilihan Raya Universitas (University General Election)',
       exp2_date: 'Oct – Dec 2025',
@@ -159,8 +180,8 @@
       skill_soft2_desc: 'Orchestrated asset staging, resource allocations, and vendor logistics for dozens of student organizations at UKM EXPO.',
       skill_soft3_title: 'Stakeholder Engagement & Mentorship',
       skill_soft3_desc: 'Coordinated student empowerment programs, academic tutoring, and faculty feedback forums within HIMA SI.',
-      skill_soft4_title: 'Analytical Problem Solving & Strategy',
-      skill_soft4_desc: 'Synthesized market research and quantitative consumer models into a 12-month execution roadmap (National Semifinalist).',
+      skill_soft4_title: 'Team Coordination',
+      skill_soft4_desc: 'Led and coordinated multi-member divisions in logistics and meal operations.',
       
       skill_group4_title: 'Languages',
       lang_id_name: 'Indonesian',
@@ -272,7 +293,6 @@
       hero_headline: 'Saya <span class="italic text-amber-brand underline decoration-amber-brand decoration-wavy decoration-2 underline-offset-8">Vicky Juni Hendri</span>, Mahasiswa Sistem Informasi Berfokus pada Data & BI.',
       hero_bio: 'Mahasiswa S1 Sistem Informasi dengan pengalaman langsung dalam analisis data, Business Intelligence, dan analisis proses bisnis. Saya mentransformasikan data operasional menjadi dasbor KPI dan wawasan strategis menggunakan Python, SQL, dan tools BI.',
       hero_location: 'Depok, Indonesia',
-      hero_status: 'Mencari Magang Data/BI • Tersedia mulai [ISI BULAN/TAHUN] • [ISI DURASI] • [ISI LOKASI/REMOTE]',
       hero_cta_projects: 'Lihat Proyek Saya',
       hero_cta_cv: 'Unduh CV',
       hero_preview_cv: 'Pratinjau CV',
@@ -370,6 +390,28 @@
       exp1_date: 'Jan 2026 – Sekarang',
       exp1_desc: 'Menginisiasi program keterlibatan mahasiswa dan penguatan akademik bagi angkatan Sistem Informasi, memfasilitasi bimbingan akademik, serta mengoordinasikan sesi umpan balik berbasis data dengan pihak fakultas.',
       
+      exp_gemas_role: 'Ketua Divisi Pengelolaan Konsumsi – GEMAS (Pengabdian Masyarakat)',
+      exp_gemas_org: 'HIMA S1 Sistem Informasi UPNVJ',
+      exp_gemas_date: 'September 2026 – November 2026',
+      exp_gemas_desc: 'Memimpin dan mengoordinasikan 4 anggota tim dalam mengelola kebutuhan konsumsi bagi 40 orang selama 5 hari kegiatan. Mengoordinasikan perencanaan menu, pengadaan bahan makanan, serta proses memasak dan distribusi konsumsi. Berkolaborasi dengan anggota tim, Project Officer (PO), dan Vice Project Officer (VPO) dalam mengoptimalkan anggaran konsumsi dari Rp3 juta menjadi Rp2,5 juta (penghematan 16,7%), dengan seluruh kebutuhan konsumsi terpenuhi.',
+      exp_gemas_skills: [
+        'Google Sheets',
+        'Leadership & Team Coordination',
+        'Operational Planning',
+        'Budgeting & Cost Control'
+      ],
+
+      exp_visit_role: 'Ketua Divisi Sarana dan Prasarana – Studi Banding HIMSI UPNVJ × HIMATIK PNJ',
+      exp_visit_org: 'HIMA S1 Sistem Informasi UPNVJ',
+      exp_visit_date: 'Juli 2026 – Agustus 2026',
+      exp_visit_desc: 'Memimpin 3 anggota divisi dalam merencanakan dan mengelola kebutuhan perlengkapan kegiatan, mulai dari pengadaan hingga distribusi. Menyusun anggaran serta melakukan inventarisasi perlengkapan untuk memastikan seluruh kebutuhan kegiatan terpenuhi tepat waktu. Berkoordinasi dengan panitia internal dan HIMATIK PNJ dalam memenuhi kebutuhan logistik serta menangani perubahan kebutuhan operasional.',
+      exp_visit_skills: [
+        'Leadership & Team Coordination',
+        'Operational Planning',
+        'Budgeting & Inventory Management',
+        'Stakeholder Coordination'
+      ],
+      
       exp2_role: 'Head of Supervisory Division (Ketua Pengawas)',
       exp2_org: 'Pemilihan Raya Universitas',
       exp2_date: 'Okt – Des 2025',
@@ -402,8 +444,8 @@
       skill_soft2_desc: 'Mengorkestrasi tata letak fasilitas, alokasi aset, dan jadwal vendor untuk puluhan organisasi pada perhelatan UKM EXPO.',
       skill_soft3_title: 'Kolaborasi Pemangku Kepentingan',
       skill_soft3_desc: 'Mengoordinasikan program penguatan akademik, mentoring mahasiswa, dan forum aspirasi berbasis data dengan pihak fakultas di HIMA SI.',
-      skill_soft4_title: 'Analisis Masalah & Strategi',
-      skill_soft4_desc: 'Merumuskan riset pasar kuantitatif dan model perilaku konsumen menjadi roadmap eksekusi 12 bulan (Semifinalist Nasional).',
+      skill_soft4_title: 'Koordinasi Tim',
+      skill_soft4_desc: 'Memimpin dan mengoordinasikan divisi dalam logistik dan operasional konsumsi.',
       
       skill_group4_title: 'Bahasa',
       lang_id_name: 'Bahasa Indonesia',
